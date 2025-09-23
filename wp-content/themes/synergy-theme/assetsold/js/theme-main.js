@@ -15,7 +15,9 @@
 
 
   /* ------------- Gsap registration Js -------------*/
-  gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+  gsap.registerPlugin(ScrollTrigger
+    
+  );
   gsap.config({
     nullTargetWarn: false,
   });

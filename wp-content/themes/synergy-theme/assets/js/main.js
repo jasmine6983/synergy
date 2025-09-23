@@ -66,6 +66,32 @@ function closeSidebar() {
 toggle.addEventListener('click', openSidebar);
 closeBtn.addEventListener('click', closeSidebar);
 overlay.addEventListener('click', closeSidebar);
+gsap.from(".about-us .bg-label", {
+  y: -100, 
+  duration: 1,
+  opacity : 0,
+  ease: "power2.inOut",
+  scrollTrigger: {
+    trigger: ".about-us",   // watch this element
+    start: "top 80%",       // when top of .bg-label hits 80% of viewport
+    toggleActions: "play none none none", // play once, don’t reverse
+          // ensures animation runs only once
+  }
+});
+
+gsap.from(".about-us h1", {
+  y: 100, 
+  duration: 1,
+  opacity : 0,
+  ease: "power2.inOut",
+  scrollTrigger: {
+    trigger: ".about-us",   // watch this element
+    start: "top 80%",       // when top of .bg-label hits 80% of viewport
+    toggleActions: "play none none none", // play once, don’t reverse
+          // ensures animation runs only once
+  }
+});
+
 
 
 });
