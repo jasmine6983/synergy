@@ -13,6 +13,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/css/odometer.css">
+    <link rel='stylesheet' href="<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/css/theme-core.css" />
     <link rel="stylesheet" href="<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/css/style.css">
     <?php wp_head(); ?>
 </head>
@@ -38,8 +39,10 @@
                         $menu_items = wp_get_nav_menu_items($menu->term_id);
                     }
                     foreach ($menu_items as $item) {
+                    
+
                     ?>
-                        <li class="nav-item"><a class="nav-link" href="#"><?php echo $item->title;?></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#"><?php echo $item->title; ?></a></li>
                     <?php
                     }
                     ?>
