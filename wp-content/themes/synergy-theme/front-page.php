@@ -397,7 +397,7 @@ if ($ai) {
                 <div class="form-wrap">
                     <h2>Connect With Us</h2>
                     <p>Hey! Connect us with  <span>0987-6543-210</span>or email us through
-                        <span>info@example.com</span>
+                        <span>contact@synergyaiwealth.com</span>
                         <br>or fill the following form. We will contact you back within 12
                         hours or prior.
                     </p>
