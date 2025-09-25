@@ -29,65 +29,65 @@ get_header();
                         }
                         ?>
                         <h1 id="hero-title">
-                            <h1>
+
+                            <?php
+                            if (!empty($caption_1)) {
+                                echo '<span class="ai-span">' . esc_html($caption_1) . '</span>';
+                            } else {
+                                echo '<span class="ai-span">no input</span>';
+                            }
+
+                            if (!empty($caption_2)) {
+                                echo esc_html($caption_2);
+                            } else {
+                                echo 'no input';
+                            }
+
+                            if (!empty($caption_3)) {
+                                echo '<br><span style="color: #094C80;">' . esc_html($caption_3) . '</span>';
+                            } else {
+                                echo '<br><span style="color: #094C80;">no input</span>';
+                            }
+
+                            if (!empty($caption_4)) {
+                                echo ' ' . esc_html($caption_4);
+                            } else {
+                                echo ' no input';
+                            }
+                            ?>
+                        </h1>
+
+
+                        <div class="action-wrap">
+                            <p>
                                 <?php
-                                if (!empty($caption_1)) {
-                                    echo '<span class="ai-span">' . esc_html($caption_1) . '</span>';
+                                if (!empty($banner_description_part_1)) {
+                                    echo esc_html($banner_description_part_1);
                                 } else {
-                                    echo '<span class="ai-span">no input</span>';
+                                    echo 'No description available';
                                 }
 
-                                if (!empty($caption_2)) {
-                                    echo esc_html($caption_2);
-                                } else {
-                                    echo 'no input';
-                                }
+                                echo '<br>';
 
-                                if (!empty($caption_3)) {
-                                    echo '<br><span style="color: #094C80;">' . esc_html($caption_3) . '</span>';
+                                if (!empty($banner_description_part_2)) {
+                                    echo esc_html($banner_description_part_2);
                                 } else {
-                                    echo '<br><span style="color: #094C80;">no input</span>';
-                                }
-
-                                if (!empty($caption_4)) {
-                                    echo ' ' . esc_html($caption_4);
-                                } else {
-                                    echo ' no input';
+                                    echo 'No description available';
                                 }
                                 ?>
-                            </h1>
+                            </p>
 
-
-                            <div class="action-wrap">
-                                <p>
-                                    <?php
-                                    if (!empty($banner_description_part_1)) {
-                                        echo esc_html($banner_description_part_1);
-                                    } else {
-                                        echo 'No description available';
-                                    }
-
-                                    echo '<br>';
-
-                                    if (!empty($banner_description_part_2)) {
-                                        echo esc_html($banner_description_part_2);
-                                    } else {
-                                        echo 'No description available';
-                                    }
-                                    ?>
-                                </p>
-
-                                <button class="explore-more">
-                                    <?php
-                                    if (!empty($banner_button_text)) {
-                                        echo esc_html($banner_button_text);
-                                    } else {
-                                        echo 'Learn More';
-                                    }
-                                    ?>
-                                    <img src="<?php echo esc_url(get_site_url()); ?>/wp-content/themes/synergy-theme/assets/img/arrow-more-circle.svg" alt="Arrow Icon" />
-                                </button>
-                            </div>
+                            <button class="explore-more">
+                                <?php
+                                if (!empty($banner_button_text)) {
+                                    echo esc_html($banner_button_text);
+                                } else {
+                                    echo 'Learn More';
+                                }
+                                ?>
+                                <img src="<?php echo esc_url(get_site_url()); ?>/wp-content/themes/synergy-theme/assets/img/arrow-more-circle.svg" alt="Arrow Icon" />
+                            </button>
+                        </div>
 
                     </div>
 
