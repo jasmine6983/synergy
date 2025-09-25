@@ -666,7 +666,7 @@ right: 0px;
 
 
 
-@media screen and (max-width: 998px) {
+@media screen and (max-width: 991px) {
     .navbar-nav .nav-item {
         margin-left: 0px;
     }
@@ -728,18 +728,134 @@ right: 0px;
         opacity: 1;
         visibility: visible;
     }
-    
+    .our-services {
+    text-align: center;
 }
-
-
-@media screen and (max-width: 768px) { 
-     .xs-order {order: 1;}
+.head-flex {
+    flex-direction: column;
+}
+ .xs-order {order: 1;}
      .banner-txt-inner {
         text-align: center;
         margin-top: 20px;
      }
      .banner-img img {
-            width: 140%;
+            width: 124%;
      }
+     .about-us {
+        text-align: center;
+     }
+     .elementor-element.elementor-element-d1fd51a.e-con-full.tj-sticky-panel-3.e-flex.e-con.e-child {
+        text-align: center;
+        max-width: 100% !important;
+     }
+    
 }
+
+
+@media screen and (max-width: 768px) { 
+    
+.banner-img {
+
+min-height: 500px;
+}
+
+.box {
+    width: 50%;
+    height: 50%;}
+
+.box  h2 {
+    font-size: 50px !important;
+}
+.exp-box h2 { margin-top: 0px !important;}
+
+h1 {
+    font-size: 40px !important;
+    padding-bottom: 15px;
+}
+.navbar-brand img {
+    width: 80%;
+}
+
+
+.h10-process-wrapper .h10-process-item
+
+ {
+   
+    padding-bottom: 2em !important;
+    padding-left: 2em !important;
+}
+
+.h10-process-wrapper {
+            padding: 20px;
+}
+.form-wrap {
+    margin: 20px;
+    padding: 20px;
+}
+.about-us-op {
+    padding: 20px;
+}
+.about-us-op h4 ,.about-us-op p{
+    text-align: left;
+}
+
+.our-services {
+    padding: 5rem 3%;
+   
+}
+
+.ai-span::before {
+    top: -23px;
+    left: -29px;
+}
+.banner-txt p {
+    font-size: 18px;
+    font-family: 'Poppins';
+    color: #6E6E6E;
+    margin-top: 0rem;
+    margin-bottom: 2rem;
+}
+
+footer {
+    background: url(../img/Footer-bg.png);
+    padding-top: 5em;
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+    margin-top: -53px;
+    background-size: cover;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.footer-sec-2 .d-flex {}
+
+.quick-link {
+    flex-direction: column;
+}
+
+
+.footer-bottom {
+    flex-direction: column;
+}
+
+
+.e-parent {
+    padding: 3rem 5%;
+}
+
+.form-submit { width: 100%;}
+.form-wrap h2 {
+    text-align: center;
+}
+.footer-sec-2 div {
+    width: 100% !important;
+}
+
+.footer-sec-2 .d-flex {
+    flex-direction: column;
+}
+
+}
+
+
 

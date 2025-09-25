@@ -187,6 +187,10 @@ gsap.from(".Services-box", {
  
 });
 
+// Make sure GSAP is loaded before this script
+
+
+
 
   window.addEventListener('load', () => {
       setTimeout(() => {

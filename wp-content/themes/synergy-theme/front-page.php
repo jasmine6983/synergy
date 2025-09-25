@@ -6,7 +6,7 @@ get_header();
 <section class="banner pad-sec">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-6 xs-order">
+            <div class="col-sm-12 col-lg-6 xs-order">
                 <div class="banner-txt">
                     <div class="banner-txt-inner">
                         <?php
@@ -93,7 +93,7 @@ get_header();
 
                 </div>
             </div>
-            <div class="col-md-5 offset-md-1">
+            <div class="col-sm-12 col-lg-5 offset-lg-1">
                 <div class="banner-img">
                     <img id="hand-img" src="<?php echo $banner_image; ?>" />
                     <div class="box exp-box" style="

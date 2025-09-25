@@ -113,7 +113,9 @@
     font-optical-sizing: auto;
     font-style: normal;
 }
-
+body {
+    overflow-x: hidden;
+}
 .navbar-brand {
     width: 200px;
 }
@@ -385,6 +387,7 @@ font-family: 'Baskervville';
     margin-bottom: 15px;
     font-family: 'Poppins';
     font-weight: 500;
+    min-height: 50px;
 }
 
 .sb-serv-content p {
@@ -392,6 +395,7 @@ font-family: 'Baskervville';
     font-family: 'Poppins';
     font-weight: 300;
     margin-bottom: 30px;
+    min-height: 100px;
 }
 
 .sb-serv-content a {
@@ -625,13 +629,39 @@ right: 0px;
 
 .quick-link ul  {
     list-style: none;
-    padding-left: 10px;
+    padding-left: 0px;
 }
 
 .quick-link ul  li {
     font-family: 'Poppins';
     margin-bottom: 7px;
+    font-size: 12px;
+    color: #bebebe;
 }
+
+.loader {
+        position: fixed;
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    align-items: center;
+    display: flex
+;
+    justify-content: center;
+}
+
+ .loader img {
+    width: 40px;
+    position: relative;
+  animation: mymove 2.5s infinite;
+}
+
+@keyframes mymove {
+  from {    rotate: 2deg;}
+  to {    rotate: 360deg;}
+}
+
 /* ------------------media query -------------*/
 
 
