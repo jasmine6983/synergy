@@ -862,5 +862,9 @@ footer {
 
 }
 
+textarea {
+  overflow-y: hidden !important;
+  resize: none;
+}
 
 

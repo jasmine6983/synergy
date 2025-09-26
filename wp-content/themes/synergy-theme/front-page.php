@@ -443,7 +443,7 @@ if ($ai) {
 
                             <div class="col-md-12 col-xs-12">
                                 <div class="form-group">
-                                    <textarea name="message" class="form-control" rows="4" placeholder="Additional Message"></textarea>
+                                    <textarea name="message" class="form-control" rows="8" placeholder="Additional Message" ></textarea>
                                 </div>
                             </div>
 
