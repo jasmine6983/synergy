@@ -322,7 +322,7 @@ if ($ai) {
                             <div class="sec-heading style-3">
 
                                 <label class="bg-label white">AI Strategies</label>
-                                <h1><?php echo $caption_1; ?><span class="ai-span"><?php echo $caption_2; ?></span><?php echo $caption_3; ?></h1>
+                                <h1><?php echo $caption_1; ?><span class="ai-span"> <?php echo $caption_2; ?></span> <?php echo $caption_3; ?></h1>
                                 <p> <?php echo $description_1; ?></p>
                                 <p><?php echo $description_2; ?>  </p>
                             </div>
@@ -443,7 +443,7 @@ if ($ai) {
 
                             <div class="col-md-12 col-xs-12">
                                 <div class="form-group">
-                                    <textarea name="message" class="form-control" rows="8" placeholder="Additional Message" ></textarea>
+                                    <textarea name="message" class="form-control" rows="4" placeholder="Additional Message" ></textarea>
                                 </div>
                             </div>
 
