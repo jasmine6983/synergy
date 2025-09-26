@@ -1,9 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Baskervville:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
- html{
-    margin-top: 0px !important;
-
- }   
-
 
 .poppins-thin {
     font-family: "Poppins", sans-serif;
@@ -133,7 +128,7 @@ body {
     font-family: "Poppins", sans-serif;
     font-weight: 500;
     font-style: normal;
-    font-size: 16px;
+    font-size: 18px;
     color: #000000;
 }
 
@@ -151,8 +146,8 @@ body {
 }
 
 .login-link {
-    font-size: 20px;
-    font-family: "Baskervville", serif;
+    font-size: 18px;
+    font-family: 'Poppins';
     font-optical-sizing: auto;
     font-style: normal;
     color: #000;
@@ -307,6 +302,11 @@ body {
     border-radius: 47px;
     overflow: hidden;
     position: relative;
+    background: url(../img/about-us-img.png);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .aboutus-pop-note{
     
@@ -347,7 +347,7 @@ font-family: 'Baskervville';
 
 
 .our-services {
-    padding: 10rem 2%;
+    padding: 5rem 2%;
     background: #F3F5F4;
 }
 
@@ -393,6 +393,7 @@ font-family: 'Baskervville';
     font-family: 'Poppins';
     font-weight: 500;
     min-height: 50px;
+    max-height: 50px;
 }
 
 .sb-serv-content p {
@@ -400,7 +401,7 @@ font-family: 'Baskervville';
     font-family: 'Poppins';
     font-weight: 300;
     margin-bottom: 30px;
-    min-height: 100px;
+    max-height: 100px;
 }
 
 .sb-serv-content a {
@@ -512,12 +513,13 @@ margin-bottom: 15px;
 }
 .form-wrap .form-control {
     
-height: 60px;
+height: auto;
     
 padding: 20px;
     
 border-radius: 12px;
- font-family: 'Poppins';
+    
+font-family: 'Poppins';
 }
 
 
@@ -662,6 +664,15 @@ right: 0px;
   animation: mymove 2.5s infinite;
 }
 
+.sb-serv-content p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* number of lines before ellipsis */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
 @keyframes mymove {
   from {    rotate: 2deg;}
   to {    rotate: 360deg;}
@@ -677,7 +688,8 @@ right: 0px;
     }
 
     .navbar-toggler {
-        border: none;
+        border: none !important;
+        box-shadow: none !important;
     }
    
 }
@@ -689,7 +701,7 @@ right: 0px;
         top: 0;
         right: -500px; /* hidden offscreen */
         height: 100% !important;
-        width: 50%;
+        width: 70%;
         background-color: #fff;
         transition: right 1s ease; /* smooth slide */
         z-index: 1050;
@@ -762,7 +774,7 @@ right: 0px;
     
 .banner-img {
 
-min-height: 500px;
+min-height: 420px;
 }
 
 .box {
@@ -770,8 +782,14 @@ min-height: 500px;
     height: 50%;}
 
 .box  h2 {
-    font-size: 50px !important;
+    font-size: 45px !important;
 }
+
+.box  p {
+    font-size: 14px !important;
+}
+
+
 .exp-box h2 { margin-top: 0px !important;}
 
 h1 {
@@ -860,11 +878,28 @@ footer {
     flex-direction: column;
 }
 
+
+.form-wrap-wrapper , .our-services , .about-us{
+  overflow-x: hidden !important;
 }
 
-textarea {
-  overflow-y: hidden !important;
-  resize: none;
+.explore-more {
+    font-size: 16px;
 }
+.explore-more img {
+    width: 40px;
+}
+.about-us-right-box {
+    height: 500px;
+}
+.about-us .col-md-5.offset-md-1{order: 1;margin-bottom: 25px;}
+
+.about-us .col-md-6{
+    order: 2;
+}
+
+
+}
+
 
 

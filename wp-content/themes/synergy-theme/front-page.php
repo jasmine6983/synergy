@@ -213,7 +213,7 @@ get_header();
                 <div class="about-us-right-box">
                     <div class="aboutus-pop-note"><?php echo $about_right_caption_1; ?> <img style="margin-left: 5px;" src="<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/img/Check Mark.png" /></div>
                     <div class="aboutus-pop-note" style="    bottom: 60px;"><?php echo $about_right_caption_2; ?> <img style="margin-left: 5px;" src="<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/img/Check Mark.png" /></div>
-                    <img src="<?php echo $about_right_image; ?>" width="100%" />
+                    <!-- <img src="<?php echo $about_right_image; ?>" width="100%" /> -->
                 </div>
 
             </div>
@@ -261,7 +261,7 @@ get_header();
                 while ($service_query->have_posts()) : $service_query->the_post();
 
             ?>
-                    <div class="col-md-4">
+                    <div class="col-md-6 col-lg-4">
                         <div class="Services-box">
                             <div class="sb-serv-img" style="background: url(<?php echo get_field('service_image'); ?>);">
                                 <div class="number-label"><?php echo '0' . $i; ?></div>
