@@ -121,7 +121,7 @@ get_header();
 ">
 
                         <h2 style="
-    margin-top: 100px;
+    margin-top: 70px;
     color: #65BCFF;
     font-size: 81px;
     font-family: 'Poppins';

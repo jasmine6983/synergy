@@ -774,7 +774,7 @@ right: 0px;
     
 .banner-img {
 
-min-height: 420px;
+min-height: 330px;
 }
 
 .box {
@@ -782,11 +782,11 @@ min-height: 420px;
     height: 50%;}
 
 .box  h2 {
-    font-size: 45px !important;
+    font-size: 30px !important;
 }
 
 .box  p {
-    font-size: 14px !important;
+    font-size: 13px !important;
 }
 
 
@@ -898,6 +898,28 @@ footer {
     order: 2;
 }
 
+.h10-process-wrapper .h10-process-item {
+    padding: 20px 20px 20px 20px;
+    padding-left: 20px !important;
+}
+.h10-process-wrapper .h10-process-item .title {
+    font-size: 18px;
+}
+
+.h10-process-wrapper .h10-process-item .desc {
+    
+margin-bottom: 4px;
+    
+font-size: 14px;
+}
+
+    .h10-process-wrapper .h10-process-icon {
+        font-size: 38px;
+        width: 40px;
+        height: 40px;
+        margin-bottom: 20px;
+    }
+  .h10-process-wrapper .h10-process-icon img { width: 24px;}
 
 }
 
