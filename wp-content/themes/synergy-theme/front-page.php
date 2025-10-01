@@ -187,27 +187,33 @@ get_header();
                 <p> <?php echo $description_1; ?></p>
 
                 <p> <?php echo $description_2; ?> </p>
-                <div class="d-flex about-us-op">
-                    <div><img src="<?php echo $feature_1_icon; ?>"></div>
-                    <div>
-                        <h4><?php echo $feature_1_title; ?></h4>
-                        <p><?php echo $feature_1_description; ?></p>
+                <!-- mobile hidden   -->
+
+                <div class="mobile-hidden-about">
+                    <div class="d-flex about-us-op">
+                        <div><img src="<?php echo $feature_1_icon; ?>"></div>
+                        <div>
+                            <h4><?php echo $feature_1_title; ?></h4>
+                            <p><?php echo $feature_1_description; ?></p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex about-us-op">
+                        <div><img src="<?php echo $feature_2_icon; ?>"></div>
+                        <div>
+                            <h4><?php echo $feature_2_title; ?></h4>
+                            <p><?php echo $feature_2_description; ?></p>
+                        </div>
+                    </div>
+                    <div class="d-flex about-us-op">
+                        <div><img src="<?php echo $feature_3_icon; ?>"></div>
+                        <div>
+                            <h4><?php echo $feature_3_title; ?></h4>
+                            <p><?php echo $feature_3_description; ?></p>
+                        </div>
                     </div>
                 </div>
-                <div class="d-flex about-us-op">
-                    <div><img src="<?php echo $feature_2_icon; ?>"></div>
-                    <div>
-                        <h4><?php echo $feature_2_title; ?></h4>
-                        <p><?php echo $feature_2_description; ?></p>
-                    </div>
-                </div>
-                <div class="d-flex about-us-op">
-                    <div><img src="<?php echo $feature_3_icon; ?>"></div>
-                    <div>
-                        <h4><?php echo $feature_3_title; ?></h4>
-                        <p><?php echo $feature_3_description; ?></p>
-                    </div>
-                </div>
+                <!-- mobile hidden   -->
             </div>
             <div class="col-md-5 offset-md-1">
                 <div class="about-us-right-box">
@@ -218,6 +224,36 @@ get_header();
 
             </div>
         </div>
+                    <!-- mobile visible  -->
+            <div class="mobile-visible-about">
+                <div class="mob-view-about-atc-head">
+                    <h4>AI-driven analytics</h4>
+                    <p>To uncover hidden opportunities and predict market trends</p>
+                </div>
+                <div class="d-flex about-us-op">
+                    <div><img src="<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/img/Sparkling.png"></div>
+                    <div>
+                        <h4>AI-driven analytics</h4>
+                        <p>To uncover hidden opportunities and predict market trends</p>
+                    </div>
+                </div>
+                <div class="d-flex about-us-op">
+                    <div><img src="<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/img/Check Dollar.png"></div>
+                    <div>
+                        <h4>Experienced financial advisors</h4>
+                        <p>To add judgment, empathy, and trust</p>
+                    </div>
+                </div>
+                <div class="d-flex about-us-op">
+                    <div><img src="<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/img/Total Sales.png"></div>
+                    <div>
+                        <h4>Personalized</h4>
+                        <p>Tailored to unique financial goals Together, <br>this synergy ensures your
+                            financial journey is secure, transparent,<br> and growth-oriented</p>
+                    </div>
+                </div>
+            </div>
+            <!-- mobile visible   -->
     </div>
 </section>
 
@@ -311,9 +347,9 @@ get_header();
                         <a href="#">Learn More <img src="<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/img/aroow-blue.svg" /></a>
                     </div>
                 </div>
-              
+
             </div>
-             <div class="swiper-slide">
+            <div class="swiper-slide">
                 <div class="Services-box">
                     <div class="sb-serv-img" style="background: url(<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/img/sb-1.png);">
                         <div class="number-label">01</div>
@@ -326,9 +362,9 @@ get_header();
                         <a href="#">Learn More <img src="assets/img/aroow-blue.svg" /></a>
                     </div>
                 </div>
-                
+
             </div>
-             <div class="swiper-slide">
+            <div class="swiper-slide">
                 <div class="Services-box">
                     <div class="sb-serv-img" style="background: url(<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/img/sb-1.png);">
                         <div class="number-label">01</div>
@@ -341,12 +377,12 @@ get_header();
                         <a href="#">Learn More <img src="assets/img/aroow-blue.svg" /></a>
                     </div>
                 </div>
-                
+
             </div>
 
-            
-            
-            
+
+
+
 
 
 
@@ -457,70 +493,70 @@ if ($ai) {
     </div>
 </section>
 
-    <!-- AI Strategies mobile -->
+<!-- AI Strategies mobile -->
 
-    <div class="ai-Strategies-mobile">
+<div class="ai-Strategies-mobile">
 
-        <label class="bg-label white">AI Strategies</label>
-        <h1>How <span class="ai-span">AI</span> drives smarter investment strategies </h1>
-        <p class="points">Personalization + Predictive analytics </p>
-        <p class="points">Human advisors validating AI recommendations  </p>
+    <label class="bg-label white">AI Strategies</label>
+    <h1>How <span class="ai-span">AI</span> drives smarter investment strategies </h1>
+    <p class="points">Personalization + Predictive analytics </p>
+    <p class="points">Human advisors validating AI recommendations  </p>
 
 
-        <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
 
-                <!-- Each Slide -->
-                <div class="swiper-slide">
-                    <div class="process-box">
+            <!-- Each Slide -->
+            <div class="swiper-slide">
+                <div class="process-box">
 
-                        <div class="h10-process-icon tj-el-icon">
-                            <img src="<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/img/ai-ic-1.png" />
-                        </div>
-                        <div class="h10-process-content">
-                            <h4 class="title tj-el-title"> Predictive Insights</h4>
-                            <p class="desc tj-el-desc">AI models forecast trends to identify growth<br>
-                                opportunities early. </p>
-                        </div>
+                    <div class="h10-process-icon tj-el-icon">
+                        <img src="<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/img/ai-ic-1.png" />
+                    </div>
+                    <div class="h10-process-content">
+                        <h4 class="title tj-el-title"> Predictive Insights</h4>
+                        <p class="desc tj-el-desc">AI models forecast trends to identify growth<br>
+                            opportunities early. </p>
                     </div>
                 </div>
-
-                <div class="swiper-slide">
-                    <div class="process-box">
-
-                        <div class="h10-process-icon tj-el-icon">
-                            <img src="<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/img/ai-ic-1.png" />
-                        </div>
-                        <div class="h10-process-content">
-                            <h4 class="title tj-el-title"> Predictive Insights</h4>
-                            <p class="desc tj-el-desc">AI models forecast trends to identify growth<br>
-                                opportunities early. </p>
-                        </div>
-                    </div>
-                </div>
-                 <div class="swiper-slide">
-                    <div class="process-box">
-
-                        <div class="h10-process-icon tj-el-icon">
-                            <img src="<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/img/ai-ic-1.png" />
-                        </div>
-                        <div class="h10-process-content">
-                            <h4 class="title tj-el-title"> Predictive Insights</h4>
-                            <p class="desc tj-el-desc">AI models forecast trends to identify growth<br>
-                                opportunities early. </p>
-                        </div>
-                    </div>
-                </div>
-
             </div>
 
-            <!-- Pagination Dots -->
-            <div class="swiper-pagination"></div>
+            <div class="swiper-slide">
+                <div class="process-box">
+
+                    <div class="h10-process-icon tj-el-icon">
+                        <img src="<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/img/ai-ic-1.png" />
+                    </div>
+                    <div class="h10-process-content">
+                        <h4 class="title tj-el-title"> Predictive Insights</h4>
+                        <p class="desc tj-el-desc">AI models forecast trends to identify growth<br>
+                            opportunities early. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="process-box">
+
+                    <div class="h10-process-icon tj-el-icon">
+                        <img src="<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/img/ai-ic-1.png" />
+                    </div>
+                    <div class="h10-process-content">
+                        <h4 class="title tj-el-title"> Predictive Insights</h4>
+                        <p class="desc tj-el-desc">AI models forecast trends to identify growth<br>
+                            opportunities early. </p>
+                    </div>
+                </div>
+            </div>
+
         </div>
+
+        <!-- Pagination Dots -->
+        <div class="swiper-pagination"></div>
     </div>
+</div>
 
 
-    <!-- AI Strategies mobile -->
+<!-- AI Strategies mobile -->
 
 <section class="contect-form pad-sec">
     <div class="container-fluid">
