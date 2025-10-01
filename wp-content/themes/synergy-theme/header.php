@@ -14,7 +14,12 @@
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/css/odometer.css">
     <link rel='stylesheet' href="<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/css/theme-core.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/css/style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/img//favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/img//favicon-16x16.png">
+    <link rel="manifest" href="assets/img//site.webmanifest">
     <?php wp_head(); ?>
 </head>
 
@@ -56,3 +61,25 @@
     </nav>
     <!-- Overlay -->
     <div class="sidebar-overlay"></div>
+
+        <!-- Mobile nav -->
+
+    <section class="mobile-nav">
+
+        <div class="mob-nav-wrap">
+            <a class="navbar-brand" href="#"><img src="assets/img/logo.png" width="100%" /></a>
+            <a href="#" class="login-btn">Login</a>
+        </div>
+        <div class="mob-nav-menu">
+            <ul>
+                <li class="nav-item"><a class="nav-link active" href="#">Broking</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Invest</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Learn</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">For partners</a></li>
+            </ul>
+        </div>
+
+    </section>
+
+    <!-- Mobile nav -->

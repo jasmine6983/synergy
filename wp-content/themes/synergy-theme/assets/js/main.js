@@ -121,7 +121,7 @@ gsap.from("our-services .bg-label", {
 gsap.from(".Services-box", {
   scrollTrigger: {
     trigger: ".our-services",   // watch this element
-    start: "top 20%",           // when top of .our-services hits top of viewport
+    start: "top 80%",           // when top of .our-services hits top of viewport
     toggleActions: "play none none none" // play once
   },
   opacity: 0,
@@ -202,3 +202,24 @@ gsap.from(".Services-box", {
           }
       }, 5000); // 5 seconds
   });
+
+
+
+  const swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1.3,
+    spaceBetween: 20,
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2, // 2 slides on tablet
+      },
+      1024: {
+        slidesPerView: 3, // 3 slides on desktop
+      },
+    },
+  });
+

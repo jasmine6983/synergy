@@ -100,7 +100,7 @@ get_header();
     top: 45px;
     left: 30px;
 ">
-                        
+
                         <h2 style="
     margin-top: 100px;
     color: #65BCFF;
@@ -157,7 +157,7 @@ get_header();
                 $caption_1 = $about['caption_1'] ?? 'no data';
                 $caption_2 = $about['caption_2'] ?? 'no data';
                 $caption_3 = $about['caption_3'] ?? 'no data';
-                
+
 
 
                 // Descriptions
@@ -288,6 +288,81 @@ get_header();
     </div>
 </section>
 
+<!-- our services mobile -->
+
+<div class="our-services-mobile">
+    <label class="bg-label">Our Services</label>
+    <h1>Wide Range of Investment <span>Products</span></h1>
+    <!-- Swiper Container -->
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+
+            <!-- Each Slide -->
+            <div class="swiper-slide">
+                <div class="Services-box">
+                    <div class="sb-serv-img" style="background: url(<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/img/sb-1.png);">
+                        <div class="number-label">01</div>
+                    </div>
+                    <div class="sb-serv-content">
+                        <h4>Mutual Funds</h4>
+                        <p>We provide access to a diverse portfolio of mutual funds, curated using AI-powered
+                            research
+                            and validated by our experts, ensuring balanced risk and returns.</p>
+                        <a href="#">Learn More <img src="assets/img/aroow-blue.svg" /></a>
+                    </div>
+                </div>
+              
+            </div>
+             <div class="swiper-slide">
+                <div class="Services-box">
+                    <div class="sb-serv-img" style="background: url(<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/img/sb-1.png);">
+                        <div class="number-label">01</div>
+                    </div>
+                    <div class="sb-serv-content">
+                        <h4>Mutual Funds</h4>
+                        <p>We provide access to a diverse portfolio of mutual funds, curated using AI-powered
+                            research
+                            and validated by our experts, ensuring balanced risk and returns.</p>
+                        <a href="#">Learn More <img src="assets/img/aroow-blue.svg" /></a>
+                    </div>
+                </div>
+                
+            </div>
+             <div class="swiper-slide">
+                <div class="Services-box">
+                    <div class="sb-serv-img" style="background: url(<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/img/sb-1.png);">
+                        <div class="number-label">01</div>
+                    </div>
+                    <div class="sb-serv-content">
+                        <h4>Mutual Funds</h4>
+                        <p>We provide access to a diverse portfolio of mutual funds, curated using AI-powered
+                            research
+                            and validated by our experts, ensuring balanced risk and returns.</p>
+                        <a href="#">Learn More <img src="assets/img/aroow-blue.svg" /></a>
+                    </div>
+                </div>
+                
+            </div>
+
+            
+            
+            
+
+
+
+
+        </div>
+
+
+        <!-- Pagination Dots -->
+        <div class="swiper-pagination"></div>
+    </div>
+
+</div>
+
+<!-- our services mobile -->
+
+
 <?php
 
 $ai = get_field('ai');
@@ -382,6 +457,71 @@ if ($ai) {
     </div>
 </section>
 
+    <!-- AI Strategies mobile -->
+
+    <div class="ai-Strategies-mobile">
+
+        <label class="bg-label white">AI Strategies</label>
+        <h1>How <span class="ai-span">AI</span> drives smarter investment strategies </h1>
+        <p class="points">Personalization + Predictive analytics </p>
+        <p class="points">Human advisors validating AI recommendations  </p>
+
+
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+
+                <!-- Each Slide -->
+                <div class="swiper-slide">
+                    <div class="process-box">
+
+                        <div class="h10-process-icon tj-el-icon">
+                            <img src="<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/img/ai-ic-1.png" />
+                        </div>
+                        <div class="h10-process-content">
+                            <h4 class="title tj-el-title"> Predictive Insights</h4>
+                            <p class="desc tj-el-desc">AI models forecast trends to identify growth<br>
+                                opportunities early. </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="process-box">
+
+                        <div class="h10-process-icon tj-el-icon">
+                            <img src="<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/img/ai-ic-1.png" />
+                        </div>
+                        <div class="h10-process-content">
+                            <h4 class="title tj-el-title"> Predictive Insights</h4>
+                            <p class="desc tj-el-desc">AI models forecast trends to identify growth<br>
+                                opportunities early. </p>
+                        </div>
+                    </div>
+                </div>
+                 <div class="swiper-slide">
+                    <div class="process-box">
+
+                        <div class="h10-process-icon tj-el-icon">
+                            <img src="<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/img/ai-ic-1.png" />
+                        </div>
+                        <div class="h10-process-content">
+                            <h4 class="title tj-el-title"> Predictive Insights</h4>
+                            <p class="desc tj-el-desc">AI models forecast trends to identify growth<br>
+                                opportunities early. </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Pagination Dots -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+
+
+    <!-- AI Strategies mobile -->
+
 <section class="contect-form pad-sec">
     <div class="container-fluid">
         <div class="row">
@@ -443,7 +583,7 @@ if ($ai) {
 
                             <div class="col-md-12 col-xs-12">
                                 <div class="form-group">
-                                    <textarea name="message" class="form-control" rows="4" placeholder="Additional Message" ></textarea>
+                                    <textarea name="message" class="form-control" rows="4" placeholder="Additional Message"></textarea>
                                 </div>
                             </div>
 
