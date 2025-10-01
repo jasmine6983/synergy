@@ -227,8 +227,8 @@ get_header();
                     <!-- mobile visible  -->
             <div class="mobile-visible-about">
                 <div class="mob-view-about-atc-head">
-                    <h4>AI-driven analytics</h4>
-                    <p>To uncover hidden opportunities and predict market trends</p>
+                    <h4>What is Lorem Ipsum</h4>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                 </div>
                 <div class="d-flex about-us-op">
                     <div><img src="<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/img/Sparkling.png"></div>
