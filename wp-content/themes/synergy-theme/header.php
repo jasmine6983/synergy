@@ -67,7 +67,7 @@
     <section class="mobile-nav">
 
         <div class="mob-nav-wrap">
-            <a class="navbar-brand" href="#"><img src="assets/img/logo.png" width="100%" /></a>
+            <a class="navbar-brand" href="#"><img src="<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/img/logo.png" width="100%" /></a>
             <a href="#" class="login-btn">Login</a>
         </div>
         <div class="mob-nav-menu">
