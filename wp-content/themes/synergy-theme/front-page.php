@@ -148,7 +148,7 @@ get_header();
 <section class="about-us pad-sec">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-6 col-6">
                 <label class="bg-label">About US</label>
                 <?php
                 $about = get_field('about'); // group field
@@ -215,10 +215,10 @@ get_header();
                 </div>
                 <!-- mobile hidden   -->
             </div>
-            <div class="col-md-5 offset-md-1">
+            <div class="col-md-5 offset-md-1 col-6">
                 <div class="about-us-right-box">
                     <div class="aboutus-pop-note"><?php echo $about_right_caption_1; ?> <img style="margin-left: 5px;" src="<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/img/Check Mark.png" /></div>
-                    <div class="aboutus-pop-note" style="    bottom: 60px;"><?php echo $about_right_caption_2; ?> <img style="margin-left: 5px;" src="<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/img/Check Mark.png" /></div>
+                    <div class="aboutus-pop-note" style="bottom: 60px;"><?php echo $about_right_caption_2; ?> <img style="margin-left: 5px;" src="<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/img/Check Mark.png" /></div>
                     <!-- <img src="<?php echo $about_right_image; ?>" width="100%" /> -->
                 </div>
 
