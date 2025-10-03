@@ -3,7 +3,7 @@
 get_header();
 ?>
 
-<section class="banner pad-sec">
+<section id="home" class="banner pad-sec">
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-6 col-lg-6 col-6">
@@ -145,7 +145,7 @@ get_header();
 
 
 
-<section class="about-us pad-sec">
+<section id="about" class="about-us pad-sec">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-6 col-6">
@@ -224,39 +224,39 @@ get_header();
 
             </div>
         </div>
-                    <!-- mobile visible  -->
-            <div class="mobile-visible-about">
-                <div class="mob-view-about-atc-head">
-                    <h4>What is Lorem Ipsum</h4>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                </div>
-                <div class="d-flex about-us-op">
-                    <div><img src="<?php echo $feature_1_icon; ?>"></div>
-                    <div>
-                        <h4><?php echo $feature_1_title; ?></h4>
-                        <p><?php echo $feature_1_description; ?></p>
-                    </div>
-                </div>
-                <div class="d-flex about-us-op">
-                    <div><img src="<?php echo $feature_2_icon; ?>"></div>
-                    <div>
-                        <h4><?php echo $feature_2_title; ?></h4>
-                        <p><?php echo $feature_2_description; ?></p>
-                    </div>
-                </div>
-                <div class="d-flex about-us-op">
-                    <div><img src="<?php echo $feature_3_icon; ?>"></div>
-                    <div>
-                        <h4><?php echo $feature_3_title; ?></h4>
-                        <p><?php echo $feature_3_description; ?></p>
-                    </div>
+        <!-- mobile visible  -->
+        <div class="mobile-visible-about">
+            <div class="mob-view-about-atc-head">
+                <h4>What is Lorem Ipsum</h4>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            </div>
+            <div class="d-flex about-us-op">
+                <div><img src="<?php echo $feature_1_icon; ?>"></div>
+                <div>
+                    <h4><?php echo $feature_1_title; ?></h4>
+                    <p><?php echo $feature_1_description; ?></p>
                 </div>
             </div>
-            <!-- mobile visible   -->
+            <div class="d-flex about-us-op">
+                <div><img src="<?php echo $feature_2_icon; ?>"></div>
+                <div>
+                    <h4><?php echo $feature_2_title; ?></h4>
+                    <p><?php echo $feature_2_description; ?></p>
+                </div>
+            </div>
+            <div class="d-flex about-us-op">
+                <div><img src="<?php echo $feature_3_icon; ?>"></div>
+                <div>
+                    <h4><?php echo $feature_3_title; ?></h4>
+                    <p><?php echo $feature_3_description; ?></p>
+                </div>
+            </div>
+        </div>
+        <!-- mobile visible   -->
     </div>
 </section>
 
-<section class="our-services pad-sec">
+<section id="products" class="our-services pad-sec">
     <div class="container-fluid">
         <div class="row">
             <?php
@@ -273,7 +273,7 @@ get_header();
 
             <div class="d-flex head-flex">
                 <div>
-                    <label class="bg-label">Our Services</label>
+                    <label class="bg-label">Our Products</label>
                     <h1>Wide Range of <br>Investment <span>Products</span></h1>
                 </div>
                 <button class="explore-more flex-none"><?php echo $button_text; ?><img
@@ -326,7 +326,7 @@ get_header();
 <!-- our services mobile -->
 
 <div class="our-services-mobile">
-    <label class="bg-label">Our Services</label>
+    <label class="bg-label">Our Products</label>
     <h1>Wide Range of Investment <span>Products</span></h1>
     <!-- Swiper Container -->
     <div class="swiper mySwiper">
@@ -339,21 +339,21 @@ get_header();
 
             ?>
 
-            <!-- Each Slide -->
-            <div class="swiper-slide">
-                <div class="Services-box">
-                    <div class="sb-serv-img" style="background: url(<?php echo get_field('service_image'); ?>">
-                        <div class="number-label"><?php echo '0' . $i; ?></div>
-                    </div>
-                    <div class="sb-serv-content">
-                        <h4><?php echo get_the_title(); ?></h4>
-                        <p><?php echo get_field('service_description'); ?></p>
-                        <a href="#">Learn More <img src="<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/img/aroow-blue.svg" /></a>
-                    </div>
-                </div>
+                    <!-- Each Slide -->
+                    <div class="swiper-slide">
+                        <div class="Services-box">
+                            <div class="sb-serv-img" style="background: url(<?php echo get_field('service_image'); ?>">
+                                <div class="number-label"><?php echo '0' . $i; ?></div>
+                            </div>
+                            <div class="sb-serv-content">
+                                <h4><?php echo get_the_title(); ?></h4>
+                                <p><?php echo get_field('service_description'); ?></p>
+                                <a href="#">Learn More <img src="<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/img/aroow-blue.svg" /></a>
+                            </div>
+                        </div>
 
-            </div>
-             <?php
+                    </div>
+            <?php
                     $i++;
                 endwhile;
                 wp_reset_postdata(); // reset query
@@ -361,7 +361,7 @@ get_header();
                 echo '<p>No services found.</p>';
             endif;
             ?>
-            
+
 
 
 
@@ -399,7 +399,7 @@ if ($ai) {
 ?>
 
 
-<section class="elementor-element elementor-element-f50548c e-con-full e-flex e-con e-parent" data-id="f50548c"
+<section id="ai" class="elementor-element elementor-element-f50548c e-con-full e-flex e-con e-parent" data-id="f50548c"
     data-element_type="container">
     <div class="elementor-element elementor-element-5e6fbaa e-con-full tj-sticky-panel-3-container e-flex e-con e-child"
         data-id="5e6fbaa" data-element_type="container"
@@ -481,55 +481,43 @@ if ($ai) {
 <div class="ai-Strategies-mobile">
 
     <label class="bg-label white">AI Strategies</label>
-    <h1>How <span class="ai-span">AI</span> drives smarter investment strategies </h1>
-    <p class="points">Personalization + Predictive analytics </p>
-    <p class="points">Human advisors validating AI recommendations  </p>
+    <h1><?php echo $caption_1; ?><span class="ai-span"> <?php echo $caption_2; ?></span> <?php echo $caption_3; ?> </h1>
+    <p class="points"><?php echo $description_1; ?> </p>
+    <p class="points"><?php echo $description_2; ?>  </p>
 
 
     <div class="swiper mySwiper">
         <div class="swiper-wrapper">
+            <?php
+            $ai_strategy_query = new WP_Query($strategy_args);
 
-            <!-- Each Slide -->
-            <div class="swiper-slide">
-                <div class="process-box">
+            if ($ai_strategy_query->have_posts()) :
+                while ($ai_strategy_query->have_posts()) : $ai_strategy_query->the_post();
 
-                    <div class="h10-process-icon tj-el-icon">
-                        <img src="<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/img/ai-ic-1.png" />
-                    </div>
-                    <div class="h10-process-content">
-                        <h4 class="title tj-el-title"> Predictive Insights</h4>
-                        <p class="desc tj-el-desc">AI models forecast trends to identify growth<br>
-                            opportunities early. </p>
-                    </div>
-                </div>
-            </div>
+            ?>
+                    <!-- Each Slide -->
+                    <div class="swiper-slide">
+                        <div class="process-box">
 
-            <div class="swiper-slide">
-                <div class="process-box">
+                            <div class="h10-process-icon tj-el-icon">
+                                <img src="<?php echo get_field('icon'); ?>" />
+                            </div>
+                            <div class="h10-process-content">
+                                <h4 class="title tj-el-title"> <?php echo get_the_title(); ?></h4>
+                                <p class="desc tj-el-desc"><?php echo get_field('description'); ?> </p>
+                            </div>
+                        </div>
+                    </div>
+            <?php
 
-                    <div class="h10-process-icon tj-el-icon">
-                        <img src="<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/img/ai-ic-1.png" />
-                    </div>
-                    <div class="h10-process-content">
-                        <h4 class="title tj-el-title"> Predictive Insights</h4>
-                        <p class="desc tj-el-desc">AI models forecast trends to identify growth<br>
-                            opportunities early. </p>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="process-box">
+                endwhile;
+                wp_reset_postdata(); // reset query
+            else :
+                echo '<p>No AI strategies found.</p>';
+            endif;
+            ?>
 
-                    <div class="h10-process-icon tj-el-icon">
-                        <img src="<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/img/ai-ic-1.png" />
-                    </div>
-                    <div class="h10-process-content">
-                        <h4 class="title tj-el-title"> Predictive Insights</h4>
-                        <p class="desc tj-el-desc">AI models forecast trends to identify growth<br>
-                            opportunities early. </p>
-                    </div>
-                </div>
-            </div>
+
 
         </div>
 
@@ -541,7 +529,7 @@ if ($ai) {
 
 <!-- AI Strategies mobile -->
 
-<section class="contect-form pad-sec">
+<section id="contact" class="contect-form pad-sec">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-5 offset-md-6">

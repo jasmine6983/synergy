@@ -47,7 +47,7 @@
 
 
                     ?>
-                        <li class="nav-item"><a class="nav-link" href="#"><?php echo $item->title; ?></a></li>
+                        <li class="nav-item"><a class="nav-link" href="<?php echo esc_url($item->url);?>"><?php echo $item->title; ?></a></li>
                     <?php
                     }
                     ?>
@@ -75,7 +75,7 @@
                 <?php
                 foreach ($menu_items as $item) {
                 ?>
-                    <li class="nav-item"><a class="nav-link" href="#"><?php echo $item->title; ?></a></li>
+                    <li class="nav-item"><a class="nav-link" href="<?php echo esc_url($item->url);?>"><?php echo $item->title; ?></a></li>
                 <?php
                 }
                 ?>

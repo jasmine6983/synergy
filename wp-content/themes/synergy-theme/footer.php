@@ -111,5 +111,23 @@ Template Name: Footer
 <script src="<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/js/theme-main.js"></script>
 <script src="<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/js/main.js"></script>
 </body>
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            const headerOffset = 80; // Adjust if you have a sticky header
+            const elementPosition = target.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+        }
+    });
+});
+</script>
 
 </html>
