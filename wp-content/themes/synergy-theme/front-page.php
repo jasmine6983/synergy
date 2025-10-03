@@ -359,7 +359,7 @@ get_header();
                         <p>We provide access to a diverse portfolio of mutual funds, curated using AI-powered
                             research
                             and validated by our experts, ensuring balanced risk and returns.</p>
-                        <a href="#">Learn More <img src="assets/img/aroow-blue.svg" /></a>
+                        <a href="#">Learn More <img src="<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/img/aroow-blue.svg" /></a>
                     </div>
                 </div>
 
@@ -374,7 +374,7 @@ get_header();
                         <p>We provide access to a diverse portfolio of mutual funds, curated using AI-powered
                             research
                             and validated by our experts, ensuring balanced risk and returns.</p>
-                        <a href="#">Learn More <img src="assets/img/aroow-blue.svg" /></a>
+                        <a href="#">Learn More <img src="<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/img/aroow-blue.svg" /></a>
                     </div>
                 </div>
 
