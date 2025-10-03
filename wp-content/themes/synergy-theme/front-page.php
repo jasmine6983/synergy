@@ -227,8 +227,8 @@ get_header();
         <!-- mobile visible  -->
         <div class="mobile-visible-about">
             <div class="mob-view-about-atc-head">
-                <h4>What is Lorem Ipsum</h4>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <!-- <h4>What is Lorem Ipsum</h4> -->
+                <p>Our philosophy is simple—wealth is not just about accumulating money; it’s about achieving life goals, protecting what matters most, and creating a lasting legacy. We combine :</p>
             </div>
             <div class="d-flex about-us-op">
                 <div><img src="<?php echo $feature_1_icon; ?>"></div>
@@ -602,6 +602,12 @@ if ($ai) {
                             </div>
                         </div>
                     </form>
+                    <?php if (isset($_GET['contact_success']) && $_GET['contact_success'] == '1') : ?>
+                        <div class="contact-success-message" style="padding:15px; background: #d4edda; color:#155724; border:1px solid #c3e6cb; margin-bottom:15px;">
+                            Thank you! Your message has been sent successfully.
+                        </div>
+                    <?php endif; ?>
+
 
                 </div>
             </div>
