@@ -73,6 +73,14 @@
         <div class="mob-nav-menu">
             <ul>
                 <?php
+                
+                    $menu_name = 'primary-mobile';
+                    $locations = get_nav_menu_locations();
+
+                    if (isset($locations[$menu_name])) {
+                        $menu = wp_get_nav_menu_object($locations[$menu_name]);
+                        $menu_items = wp_get_nav_menu_items($menu->term_id);
+                    }
                 foreach ($menu_items as $item) {
                 ?>
                     <li class="nav-item"><a class="nav-link" href="<?php echo esc_url($item->url);?>"><?php echo $item->title; ?></a></li>

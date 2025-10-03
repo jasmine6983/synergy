@@ -18,6 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 add_action( 'after_setup_theme', 'pmf_register_primary_menu' );
 function pmf_register_primary_menu() {
     register_nav_menus( [
-        'primary' => __( 'Primary Menu', 'primary-menu-fetch' ),
+        'primary' => __( 'Primary Menu' ),
+        'primary-mobile' => ('Primary Menu Mobile'),
     ] );
 }

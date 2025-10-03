@@ -325,7 +325,7 @@ get_header();
 
 <!-- our services mobile -->
 
-<div class="our-services-mobile">
+<div id="products-mobile" class="our-services-mobile">
     <label class="bg-label">Our Products</label>
     <h1>Wide Range of Investment <span>Products</span></h1>
     <!-- Swiper Container -->
@@ -478,7 +478,7 @@ if ($ai) {
 
 <!-- AI Strategies mobile -->
 
-<div class="ai-Strategies-mobile">
+<div id="ai-mobile" class="ai-Strategies-mobile">
 
     <label class="bg-label white">AI Strategies</label>
     <h1><?php echo $caption_1; ?><span class="ai-span"> <?php echo $caption_2; ?></span> <?php echo $caption_3; ?> </h1>
