@@ -14,7 +14,7 @@
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/css/odometer.css">
     <link rel='stylesheet' href="<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/css/theme-core.css" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/css/style.css">
     <link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/img/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/img//favicon-32x32.png">
@@ -26,7 +26,7 @@
 <body>
     <nav class="navbar navbar-expand-lg ">
         <div class="container-fluid">
-            <a class="navbar-brand" href=<?php get_site_url(); ?>><img src="<?php echo get_field('site_logo');?>" /></a>
+            <a class="navbar-brand" href=<?php get_site_url(); ?>><img src="<?php echo get_field('site_logo'); ?>" /></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
                 aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -44,7 +44,7 @@
                         $menu_items = wp_get_nav_menu_items($menu->term_id);
                     }
                     foreach ($menu_items as $item) {
-                    
+
 
                     ?>
                         <li class="nav-item"><a class="nav-link" href="#"><?php echo $item->title; ?></a></li>
@@ -62,7 +62,7 @@
     <!-- Overlay -->
     <div class="sidebar-overlay"></div>
 
-        <!-- Mobile nav -->
+    <!-- Mobile nav -->
 
     <section class="mobile-nav">
 
@@ -72,12 +72,15 @@
         </div>
         <div class="mob-nav-menu">
             <ul>
-                <li class="nav-item"><a class="nav-link active" href="#">Broking</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Invest</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Learn</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">For partners</a></li>
-            </ul>
+                <?php
+                foreach ($menu_items as $item) {
+                ?>
+                    <li class="nav-item"><a class="nav-link" href="#"><?php echo $item->title; ?></a></li>
+                <?php
+                }
+                ?>
+
+
         </div>
 
     </section>

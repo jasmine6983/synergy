@@ -231,25 +231,24 @@ get_header();
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                 </div>
                 <div class="d-flex about-us-op">
-                    <div><img src="<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/img/Sparkling.png"></div>
+                    <div><img src="<?php echo $feature_1_icon; ?>"></div>
                     <div>
-                        <h4>AI-driven analytics</h4>
-                        <p>To uncover hidden opportunities and predict market trends</p>
+                        <h4><?php echo $feature_1_title; ?></h4>
+                        <p><?php echo $feature_1_description; ?></p>
                     </div>
                 </div>
                 <div class="d-flex about-us-op">
-                    <div><img src="<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/img/Check Dollar.png"></div>
+                    <div><img src="<?php echo $feature_2_icon; ?>"></div>
                     <div>
-                        <h4>Experienced financial advisors</h4>
-                        <p>To add judgment, empathy, and trust</p>
+                        <h4><?php echo $feature_2_title; ?></h4>
+                        <p><?php echo $feature_2_description; ?></p>
                     </div>
                 </div>
                 <div class="d-flex about-us-op">
-                    <div><img src="<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/img/Total Sales.png"></div>
+                    <div><img src="<?php echo $feature_3_icon; ?>"></div>
                     <div>
-                        <h4>Personalized</h4>
-                        <p>Tailored to unique financial goals Together, <br>this synergy ensures your
-                            financial journey is secure, transparent,<br> and growth-oriented</p>
+                        <h4><?php echo $feature_3_title; ?></h4>
+                        <p><?php echo $feature_3_description; ?></p>
                     </div>
                 </div>
             </div>
@@ -332,53 +331,37 @@ get_header();
     <!-- Swiper Container -->
     <div class="swiper mySwiper">
         <div class="swiper-wrapper">
+            <?php
+            $service_query = new WP_Query($args);
+            $i = 1;
+            if ($service_query->have_posts()) :
+                while ($service_query->have_posts()) : $service_query->the_post();
+
+            ?>
 
             <!-- Each Slide -->
             <div class="swiper-slide">
                 <div class="Services-box">
-                    <div class="sb-serv-img" style="background: url(<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/img/sb-1.png);">
-                        <div class="number-label">01</div>
+                    <div class="sb-serv-img" style="background: url(<?php echo get_field('service_image'); ?>">
+                        <div class="number-label"><?php echo '0' . $i; ?></div>
                     </div>
                     <div class="sb-serv-content">
-                        <h4>Mutual Funds</h4>
-                        <p>We provide access to a diverse portfolio of mutual funds, curated using AI-powered
-                            research
-                            and validated by our experts, ensuring balanced risk and returns.</p>
+                        <h4><?php echo get_the_title(); ?></h4>
+                        <p><?php echo get_field('service_description'); ?></p>
                         <a href="#">Learn More <img src="<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/img/aroow-blue.svg" /></a>
                     </div>
                 </div>
 
             </div>
-            <div class="swiper-slide">
-                <div class="Services-box">
-                    <div class="sb-serv-img" style="background: url(<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/img/sb-1.png);">
-                        <div class="number-label">01</div>
-                    </div>
-                    <div class="sb-serv-content">
-                        <h4>Mutual Funds</h4>
-                        <p>We provide access to a diverse portfolio of mutual funds, curated using AI-powered
-                            research
-                            and validated by our experts, ensuring balanced risk and returns.</p>
-                        <a href="#">Learn More <img src="<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/img/aroow-blue.svg" /></a>
-                    </div>
-                </div>
-
-            </div>
-            <div class="swiper-slide">
-                <div class="Services-box">
-                    <div class="sb-serv-img" style="background: url(<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/img/sb-1.png);">
-                        <div class="number-label">01</div>
-                    </div>
-                    <div class="sb-serv-content">
-                        <h4>Mutual Funds</h4>
-                        <p>We provide access to a diverse portfolio of mutual funds, curated using AI-powered
-                            research
-                            and validated by our experts, ensuring balanced risk and returns.</p>
-                        <a href="#">Learn More <img src="<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/img/aroow-blue.svg" /></a>
-                    </div>
-                </div>
-
-            </div>
+             <?php
+                    $i++;
+                endwhile;
+                wp_reset_postdata(); // reset query
+            else :
+                echo '<p>No services found.</p>';
+            endif;
+            ?>
+            
 
 
 
