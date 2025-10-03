@@ -733,7 +733,7 @@ font-family: 'Poppins';
     left: 0;
     width: 100%;
     padding-right: 15px;
-    text-align: right;
+    text-align: center;
 }
  .our-services-mobile .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
     margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 2px);
