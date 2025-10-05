@@ -112,22 +112,44 @@ Template Name: Footer
 <script src="<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/js/main.js"></script>
 </body>
 <script>
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            const headerOffset = 80; // Adjust if you have a sticky header
-            const elementPosition = target.getBoundingClientRect().top;
-            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                const headerOffset = 80; // Adjust if you have a sticky header
+                const elementPosition = target.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
-            window.scrollTo({
-                top: offsetPosition,
-                behavior: 'smooth'
-            });
-        }
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
     });
-});
+
+
+    (function() {
+        // Use event delegation (safe even if elements are added later or script runs early)
+        document.addEventListener('click', function(e) {
+            const btn = e.target.closest('.explore-more');
+            if (!btn) return; // not an explore button click
+
+            const actionWrap = btn.closest('.action-wrap');
+            if (!actionWrap) return;
+
+            const desc = actionWrap.querySelector('.extra-description');
+            if (!desc) {
+                console.warn('No .extra-description found in .action-wrap');
+                return;
+            }
+
+            // Toggle show/hide
+            const currentlyHidden = getComputedStyle(desc).display === 'none';
+            desc.style.display = currentlyHidden ? 'block' : 'none';
+        });
+    })();
 </script>
 
 </html>

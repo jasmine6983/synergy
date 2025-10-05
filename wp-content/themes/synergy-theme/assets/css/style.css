@@ -1155,6 +1155,7 @@ background-size: cover;
 @media screen and (max-width: 768px) { 
 
 
+
     
 .banner-img {
 
@@ -1222,6 +1223,12 @@ min-height: 100%;
     margin-top: 0rem;
     margin-bottom: 2rem;
 }
+
+.extra-description p {
+    margin-top: 3rem !important;
+}
+
+
 
 footer {
     background: url(../img/Footer-bg.png);

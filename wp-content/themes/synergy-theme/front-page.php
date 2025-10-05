@@ -29,65 +29,34 @@ get_header();
                         }
                         ?>
                         <h1 id="hero-title">
-
-                            <?php
-                            if (!empty($caption_1)) {
-                                echo '<span class="ai-span">' . esc_html($caption_1) . '</span>';
-                            } else {
-                                echo '<span class="ai-span">no input</span>';
-                            }
-
-                            if (!empty($caption_2)) {
-                                echo esc_html($caption_2);
-                            } else {
-                                echo 'no input';
-                            }
-
-                            if (!empty($caption_3)) {
-                                echo '<br><span style="color: #094C80;">' . esc_html($caption_3) . '</span>';
-                            } else {
-                                echo '<br><span style="color: #094C80;">no input</span>';
-                            }
-
-                            if (!empty($caption_4)) {
-                                echo ' ' . esc_html($caption_4);
-                            } else {
-                                echo ' no input';
-                            }
-                            ?>
+                            <span class="ai-span"><?php echo esc_html($caption_1); ?></span>
+                            <?php echo esc_html($caption_2); ?>
+                            <br><span style="color: #094C80;"><?php echo esc_html($caption_3); ?></span>
+                            <?php echo ' ' . esc_html($caption_4); ?>
                         </h1>
-
 
                         <div class="action-wrap">
                             <p>
-                                <?php
-                                if (!empty($banner_description_part_1)) {
-                                    echo esc_html($banner_description_part_1);
-                                } else {
-                                    echo 'No description available';
-                                }
-
-                                echo '<br>';
-
-                                if (!empty($banner_description_part_2)) {
-                                    echo esc_html($banner_description_part_2);
-                                } else {
-                                    echo 'No description available';
-                                }
-                                ?>
+                                <?php echo esc_html($banner_description_part_1); ?>
+                                <br>
+                                <?php echo esc_html($banner_description_part_2); ?>
                             </p>
 
                             <button class="explore-more">
-                                <?php
-                                if (!empty($banner_button_text)) {
-                                    echo esc_html($banner_button_text);
-                                } else {
-                                    echo 'Learn More';
-                                }
-                                ?>
+                                <?php echo esc_html($banner_button_text); ?>
                                 <img src="<?php echo esc_url(get_site_url()); ?>/wp-content/themes/synergy-theme/assets/img/arrow-more-circle.svg" alt="Arrow Icon" />
                             </button>
+
+                            <div class="extra-description" style="display: none;">
+
+                                <p>We understand that building and preserving wealth isn’t just about financial strategies—it’s about creating a secure future for you and your family.
+                                    By blending the precision of Artificial Intelligence with the wisdom of experienced financial advisors, we bring you a unique balance of innovation, trust, and personalized service.</p>
+
+                            </div>
+
+
                         </div>
+
 
                     </div>
 
@@ -303,9 +272,13 @@ get_header();
                             </div>
                             <div class="sb-serv-content">
                                 <h4><?php echo get_the_title(); ?></h4>
-                                <p><?php echo get_field('service_description'); ?> </p>
-                                <a href="#"> Learn More <img src="<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/img/aroow-blue.svg" /></a>
+                                <p class="service-text"><?php echo get_field('service_description'); ?> </p>
+                                <a href="javascript:void(0);" class="read-more"> Learn More <img src="<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/img/aroow-blue.svg" /></a>
                             </div>
+
+
+
+
 
                         </div>
                     </div>
@@ -347,8 +320,12 @@ get_header();
                             </div>
                             <div class="sb-serv-content">
                                 <h4><?php echo get_the_title(); ?></h4>
-                                <p><?php echo get_field('service_description'); ?></p>
-                                <a href="#">Learn More <img src="<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/img/aroow-blue.svg" /></a>
+                               
+                                    <p ><?php echo get_field('service_description'); ?></p>
+                                    <a>Learn More <img src="<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/img/aroow-blue.svg" /></a>
+                               
+                                
+
                             </div>
                         </div>
 
