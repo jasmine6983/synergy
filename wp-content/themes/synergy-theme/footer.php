@@ -150,6 +150,16 @@ Template Name: Footer
             desc.style.display = currentlyHidden ? 'block' : 'none';
         });
     })();
+
+   
+    document.querySelectorAll('.read-more').forEach(btn => {
+        btn.addEventListener('click', e => {
+            e.preventDefault();
+            const text = btn.parentElement.querySelector('.service-text');
+            text.classList.toggle('expanded');
+        });
+    });
+
 </script>
 
 </html>

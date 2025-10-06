@@ -273,7 +273,7 @@ get_header();
                             <div class="sb-serv-content">
                                 <h4><?php echo get_the_title(); ?></h4>
                                 <p class="service-text"><?php echo get_field('service_description'); ?> </p>
-                                <a href="javascript:void(0);" class="read-more"> Learn More <img src="<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/img/aroow-blue.svg" /></a>
+                                <a href="#" class="read-more"> Learn More <img src="<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/img/aroow-blue.svg" /></a>
                             </div>
 
 
@@ -320,11 +320,11 @@ get_header();
                             </div>
                             <div class="sb-serv-content">
                                 <h4><?php echo get_the_title(); ?></h4>
-                               
-                                    <p ><?php echo get_field('service_description'); ?></p>
-                                    <a>Learn More <img src="<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/img/aroow-blue.svg" /></a>
-                               
-                                
+
+                                <p class="service-text"><?php echo get_field('service_description'); ?></p>
+                                <a class="read-more">Learn More <img src="<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/img/aroow-blue.svg" /></a>
+
+
 
                             </div>
                         </div>
@@ -591,5 +591,6 @@ if ($ai) {
         </div>
     </div>
 </section>
+
 
 <?php get_footer(); ?>
