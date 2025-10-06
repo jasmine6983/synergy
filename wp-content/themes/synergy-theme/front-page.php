@@ -64,7 +64,7 @@ get_header();
             </div>
             <div class="col-sm-6 col-lg-5 offset-lg-1 col-6">
                 <div class="banner-img">
-                    <img id="hand-img" src="<?php echo $banner_image; ?>" />
+                    <!-- <img id="hand-img" src="<?php echo $banner_image; ?>" />
                     <div class="box exp-box" style="
     top: 45px;
     left: 30px;
@@ -104,7 +104,7 @@ get_header();
     font-size: 18px;
      text-align: right;
 "><?php echo $banner_count_2_text; ?></p>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
