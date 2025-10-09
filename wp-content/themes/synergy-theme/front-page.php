@@ -7,7 +7,7 @@ get_header();
 
 
 <section id="home" class="banner pad-sec">
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
             <div class="col-sm-6 col-lg-6 col-6">
                 <div class="banner-txt">
@@ -131,7 +131,7 @@ get_header();
 
 
 <section id="about" class="about-us pad-sec">
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
             <div class="col-md-6 col-6">
                 <label class="bg-label">About US</label>
@@ -242,7 +242,7 @@ get_header();
 </section>
 
 <section id="products" class="our-services pad-sec">
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
             <?php
 
@@ -394,73 +394,75 @@ if ($ai) {
 
 <section id="ai" class="elementor-element elementor-element-f50548c e-con-full e-flex e-con e-parent" data-id="f50548c"
     data-element_type="container">
-    <div class="elementor-element elementor-element-5e6fbaa e-con-full tj-sticky-panel-3-container e-flex e-con e-child"
-        data-id="5e6fbaa" data-element_type="container"
-        data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-        <div class="elementor-element elementor-element-a98450b e-flex e-con-boxed e-con e-child" data-id="a98450b"
-            data-element_type="container">
-            <div class="e-con-inner">
-                <div class="elementor-element elementor-element-d1fd51a e-con-full tj-sticky-panel-3 e-flex e-con e-child"
-                    data-id="d1fd51a" data-element_type="container">
-                    <div class="elementor-element elementor-element-68e3022 elementor-widget elementor-widget-tj-title"
-                        data-id="68e3022" data-element_type="widget" data-widget_type="tj-title.default">
-                        <div class="elementor-widget-container">
+    <div class="container">
+        <div class="elementor-element elementor-element-5e6fbaa e-con-full tj-sticky-panel-3-container e-flex e-con e-child"
+            data-id="5e6fbaa" data-element_type="container"
+            data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+            <div class="elementor-element elementor-element-a98450b e-flex e-con-boxed e-con e-child" data-id="a98450b"
+                data-element_type="container">
+                <div class="e-con-inner">
+                    <div class="elementor-element elementor-element-d1fd51a e-con-full tj-sticky-panel-3 e-flex e-con e-child"
+                        data-id="d1fd51a" data-element_type="container">
+                        <div class="elementor-element elementor-element-68e3022 elementor-widget elementor-widget-tj-title"
+                            data-id="68e3022" data-element_type="widget" data-widget_type="tj-title.default">
+                            <div class="elementor-widget-container">
 
-                            <div class="sec-heading style-3">
+                                <div class="sec-heading style-3">
 
-                                <label class="bg-label white">AI Strategies</label>
-                                <h1><?php echo $caption_1; ?><span class="ai-span"> <?php echo $caption_2; ?></span> <?php echo $caption_3; ?></h1>
-                                <p> <?php echo $description_1; ?></p>
-                                <p><?php echo $description_2; ?>  </p>
+                                    <label class="bg-label white">AI Strategies</label>
+                                    <h1><?php echo $caption_1; ?><span class="ai-span"> <?php echo $caption_2; ?></span> <?php echo $caption_3; ?></h1>
+                                    <p> <?php echo $description_1; ?></p>
+                                    <p><?php echo $description_2; ?>  </p>
+                                </div>
                             </div>
                         </div>
+
                     </div>
-
-                </div>
-                <div class="elementor-element elementor-element-a9048a5 e-con-full e-flex e-con e-child"
-                    data-id="a9048a5" data-element_type="container">
-                    <div class="elementor-element elementor-element-f811ade elementor-widget elementor-widget-tj-process"
-                        data-id="f811ade" data-element_type="widget" data-widget_type="tj-process.default">
-                        <div class="elementor-widget-container">
+                    <div class="elementor-element elementor-element-a9048a5 e-con-full e-flex e-con e-child"
+                        data-id="a9048a5" data-element_type="container">
+                        <div class="elementor-element elementor-element-f811ade elementor-widget elementor-widget-tj-process"
+                            data-id="f811ade" data-element_type="widget" data-widget_type="tj-process.default">
+                            <div class="elementor-widget-container">
 
 
-                            <div class="h10-process-wrapper">
-                                <?php
-                                $i = 1;
-                                $strategy_args = array(
-                                    'post_type'      => 'ai-strategy', // your custom post type
-                                    'posts_per_page' => -1,        // -1 = all posts
-                                    'post_status'    => 'publish', // only published posts
-                                    'orderby'        => 'date',    // optional
-                                    'order'          => 'ASC',    // optional
-                                );
+                                <div class="h10-process-wrapper">
+                                    <?php
+                                    $i = 1;
+                                    $strategy_args = array(
+                                        'post_type'      => 'ai-strategy', // your custom post type
+                                        'posts_per_page' => -1,        // -1 = all posts
+                                        'post_status'    => 'publish', // only published posts
+                                        'orderby'        => 'date',    // optional
+                                        'order'          => 'ASC',    // optional
+                                    );
 
-                                $ai_strategy_query = new WP_Query($strategy_args);
+                                    $ai_strategy_query = new WP_Query($strategy_args);
 
-                                if ($ai_strategy_query->have_posts()) :
-                                    while ($ai_strategy_query->have_posts()) : $ai_strategy_query->the_post();
+                                    if ($ai_strategy_query->have_posts()) :
+                                        while ($ai_strategy_query->have_posts()) : $ai_strategy_query->the_post();
 
-                                ?>
+                                    ?>
 
-                                        <div class="h10-process-item tj-sticky-panel-3 tj-el-process">
-                                            <div class="number-label"><?php echo '0' . $i; ?></div>
-                                            <div class="h10-process-icon tj-el-icon">
-                                                <img src="<?php echo get_field('icon'); ?>" />
+                                            <div class="h10-process-item tj-sticky-panel-3 tj-el-process">
+                                                <div class="number-label"><?php echo '0' . $i; ?></div>
+                                                <div class="h10-process-icon tj-el-icon">
+                                                    <img src="<?php echo get_field('icon'); ?>" />
+                                                </div>
+                                                <div class="h10-process-content">
+                                                    <h4 class="title tj-el-title"><?php echo get_the_title(); ?></h4>
+                                                    <p class="desc tj-el-desc"><?php echo get_field('description'); ?> </p>
+                                                </div>
                                             </div>
-                                            <div class="h10-process-content">
-                                                <h4 class="title tj-el-title"><?php echo get_the_title(); ?></h4>
-                                                <p class="desc tj-el-desc"><?php echo get_field('description'); ?> </p>
-                                            </div>
-                                        </div>
 
-                                <?php
-                                        $i++;
-                                    endwhile;
-                                    wp_reset_postdata(); // reset query
-                                else :
-                                    echo '<p>No AI strategies found.</p>';
-                                endif;
-                                ?>
+                                    <?php
+                                            $i++;
+                                        endwhile;
+                                        wp_reset_postdata(); // reset query
+                                    else :
+                                        echo '<p>No AI strategies found.</p>';
+                                    endif;
+                                    ?>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -525,9 +527,9 @@ if ($ai) {
 <!-- AI Strategies mobile -->
 
 <section id="contact" class="contect-form pad-sec">
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
-            <div class="col-md-5 offset-md-6">
+            <div class="col-md-6 offset-md-6">
                 <div class="form-wrap">
                     <h2>Connect With Us</h2>
                     <p>Hey! Connect us with  <span>0987-6543-210</span>or email us through
