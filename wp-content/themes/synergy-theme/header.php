@@ -10,7 +10,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?php bloginfo('name'); ?></title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/css/odometer.css">
     <link rel='stylesheet' href="<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/css/theme-core.css" />
@@ -19,7 +19,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/img/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/img//favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/img//favicon-16x16.png">
-    <link rel="manifest" href="assets/img//site.webmanifest">
+    <link rel="manifest" href="<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/img//site.webmanifest"> -->
     <?php wp_head(); ?>
 </head>
 

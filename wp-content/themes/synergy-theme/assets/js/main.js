@@ -310,4 +310,6 @@ $(".learn-more").click(function (e) {
 });
 
 
-
+$("#banner-explore-more-mobile").click(function () {
+  $(".mobile-banner-dec").toggleClass("mobile-banner-dec-shaow");
+});

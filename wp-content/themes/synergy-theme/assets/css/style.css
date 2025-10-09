@@ -819,6 +819,22 @@ nav.navbar {
     border-top-right-radius: 15px;
 }
 
+#banner-explore-more-mobile {
+    display: none
+}
+
+.mobile-banner-dec {
+    display: none;
+}
+
+.mobile-banner-dec-shaow {
+    display: block;
+    padding-top: 10px;
+    text-align: left;
+    font-family: 'Poppins';
+    font-size: 14px;
+    color: #6E6E6E;
+}
 
 /* ------------------media query -------------*/
 
@@ -891,6 +907,9 @@ nav.navbar {
 /* Only for mobile */
 @media (max-width: 991.98px) {
 
+    #banner-explore-more-mobile {
+        display: block
+    }
 
     .swiper {
         width: 100%;
@@ -1332,6 +1351,9 @@ nav.navbar {
         border-top-right-radius: 15px;
     }
 
+    #banner-explore-more {
+        display: none;
+    }
 
 }
 

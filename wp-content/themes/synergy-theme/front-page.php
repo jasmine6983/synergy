@@ -42,7 +42,7 @@ get_header();
                             <p>
                                 <?php echo esc_html($banner_description_part_1); ?>
                                 <br>
-                                <?php echo esc_html($banner_description_part_2); ?>
+                                <?php echo esc_html($banner_description_part_2); ?><br>
                                 <span class="hide-show">We understand that building and preserving wealth
                                     isn’t just about
                                     financial strategies—it’s about creating a secure future for you and your
@@ -55,7 +55,10 @@ get_header();
                                 <span class="btn-text"><?php echo esc_html($banner_button_text); ?></span>
                                 <img src="<?php echo esc_url(get_site_url()); ?>/wp-content/themes/synergy-theme/assets/img/arrow-more-circle.svg" alt="Arrow Icon" />
                             </button>
-
+                            <button id="banner-explore-more-mobile" class="explore-more">
+                                <span class="btn-text"><?php echo esc_html($banner_button_text); ?></span>
+                                <img src="<?php echo esc_url(get_site_url()); ?>/wp-content/themes/synergy-theme/assets/img/arrow-more-circle.svg" />
+                            </button>
 
 
 
@@ -112,6 +115,15 @@ get_header();
                 </div>
             </div>
         </div>
+        <p class="mobile-banner-dec">
+            We understand that building and preserving
+            wealth
+            isn’t just about
+            financial strategies—it’s about creating a secure future for you and your
+            family. By blending the precision of Artificial Intelligence with the wisdom of
+            experienced financial advisors, we bring you a unique balance of innovation,
+            trust, and personalized service.
+        </p>
     </div>
 </section>
 
@@ -414,7 +426,7 @@ if ($ai) {
 
                             <div class="h10-process-wrapper">
                                 <?php
-                                $i=1;
+                                $i = 1;
                                 $strategy_args = array(
                                     'post_type'      => 'ai-strategy', // your custom post type
                                     'posts_per_page' => -1,        // -1 = all posts
@@ -431,7 +443,7 @@ if ($ai) {
                                 ?>
 
                                         <div class="h10-process-item tj-sticky-panel-3 tj-el-process">
-                                               <div class="number-label"><?php echo '0' . $i; ?></div>
+                                            <div class="number-label"><?php echo '0' . $i; ?></div>
                                             <div class="h10-process-icon tj-el-icon">
                                                 <img src="<?php echo get_field('icon'); ?>" />
                                             </div>
@@ -442,7 +454,7 @@ if ($ai) {
                                         </div>
 
                                 <?php
-                                     $i++;
+                                        $i++;
                                     endwhile;
                                     wp_reset_postdata(); // reset query
                                 else :
@@ -471,7 +483,7 @@ if ($ai) {
     <div class="swiper mySwiper">
         <div class="swiper-wrapper">
             <?php
-            $i=1;
+            $i = 1;
             $ai_strategy_query = new WP_Query($strategy_args);
 
             if ($ai_strategy_query->have_posts()) :
@@ -481,7 +493,7 @@ if ($ai) {
                     <!-- Each Slide -->
                     <div class="swiper-slide">
                         <div class="process-box">
-                          <div class="number-label"><?php echo '0' . $i; ?></div>
+                            <div class="number-label"><?php echo '0' . $i; ?></div>
                             <div class="h10-process-icon tj-el-icon">
                                 <img src="<?php echo get_field('icon'); ?>" />
                             </div>
@@ -492,7 +504,7 @@ if ($ai) {
                         </div>
                     </div>
             <?php
-                 $i++;
+                    $i++;
                 endwhile;
                 wp_reset_postdata(); // reset query
             else :
