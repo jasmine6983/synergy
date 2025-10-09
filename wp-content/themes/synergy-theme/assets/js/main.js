@@ -279,8 +279,6 @@ $(".product-learnmore").click(function (e) {
   e.preventDefault();
 
   const $this = $(this);
- const siteUrl = $this.data('site-url');
-  
   const $para = $this.siblings("p");
 
   // Toggle a class for expanded/collapsed state
@@ -288,9 +286,9 @@ $(".product-learnmore").click(function (e) {
 
   // Change text based on state
   if ($para.hasClass("expanded")) {
-    $this.html('Show Less <img src="' + siteUrl + '/wp-content/themes/synergy-theme/assets/img/aroow-blue.svg" />');
+    $this.html('Show Less <img src="assets/img/aroow-blue.svg" />');
   } else {
-    $this.html('Learn More <img src="' + siteUrl + '/wp-content/themes/synergy-theme/assets/img/aroow-blue.svg" />');
+    $this.html('Learn More <img src="assets/img/aroow-blue.svg" />');
   }
 });
 
@@ -299,15 +297,14 @@ $(".learn-more").click(function (e) {
   e.preventDefault();
 
   const $this = $(this);
-   const siteUrl = $this.data('site-url');
   const $p = $this.siblings("p");
 
   $p.toggleClass("expanded");
 
   if ($p.hasClass("expanded")) {
-    $this.html('Show Less <img src="' + siteUrl + '/wp-content/themes/synergy-theme/assets/img/aroow-blue.svg" />');
+    $this.html('Show Less <img src="assets/img/aroow-blue.svg" />');
   } else {
-    $this.html('Learn More <img src="' + siteUrl + '/wp-content/themes/synergy-theme/assets/img/aroow-blue.svg" />');
+    $this.html('Learn More <img src="assets/img/aroow-blue.svg" />');
   }
 });
 

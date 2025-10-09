@@ -161,7 +161,7 @@ body {
 }
 
 .banner-img {
-    background: url(../img/Right-Banner.png);
+    background: url(../img/banner-s.png);
     min-height: 700px;
     background-size: cover;
     border-radius: 26px;
@@ -169,7 +169,7 @@ body {
     align-items: center;
     overflow: hidden;
     position: relative;
-    background-position: center;
+    background-position: right;
 }
 
 .banner-txt {
@@ -1290,9 +1290,9 @@ nav.navbar {
 
     .banner-img {
         min-height: 100%;
-        background: url(../img/Right-Banner-mobile.png);
+        background: url(../img/mobile-banner-s.png);
         background-size: cover;
-        background-position: center;
+        background-position: right;
     }
 
     .box {
