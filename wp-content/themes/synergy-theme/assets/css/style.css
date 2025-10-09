@@ -832,7 +832,7 @@ nav.navbar {
     padding-top: 10px;
     text-align: left;
     font-family: 'Poppins';
-    font-size: 16px;
+    font-size: 1px;
     color: #6E6E6E;
 }
 
@@ -1032,7 +1032,10 @@ nav.navbar {
 
     .banner-txt-inner {
         /* text-align: center; */
-        margin-top: 20px;
+        /* margin-top: 20px; */
+        display:flex;
+        flex-direction: column;
+        justify-content: unset;
     }
 
     .banner-img img {
