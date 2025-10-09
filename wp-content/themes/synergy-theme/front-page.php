@@ -52,7 +52,7 @@ get_header();
                             </p>
 
                             <button id="banner-explore-more" class="explore-more">
-                                <?php echo esc_html($banner_button_text); ?>
+                                <span class="btn-text"><?php echo esc_html($banner_button_text); ?></span>
                                 <img src="<?php echo esc_url(get_site_url()); ?>/wp-content/themes/synergy-theme/assets/img/arrow-more-circle.svg" alt="Arrow Icon" />
                             </button>
 
