@@ -78,8 +78,10 @@ function synergy_handle_contact_form()
 
     wp_mail($to, $subject, $body, $headers);
 
-    // Redirect after submission
-    wp_redirect(home_url('/'));
+    
+  // Redirect after submission with success parameter
+wp_redirect(add_query_arg('contact_status', 'success', home_url('/')));
+exit;
     exit;
 }
 add_action('admin_post_nopriv_synergy_contact_form', 'synergy_handle_contact_form'); // for non-logged-in users

@@ -1,7 +1,10 @@
 <?php
 /* Template Name: Home */
 get_header();
+
 ?>
+
+
 
 <section id="home" class="banner pad-sec">
     <div class="container-fluid">
@@ -40,19 +43,20 @@ get_header();
                                 <?php echo esc_html($banner_description_part_1); ?>
                                 <br>
                                 <?php echo esc_html($banner_description_part_2); ?>
+                                <span class="hide-show">We understand that building and preserving wealth
+                                    isn’t just about
+                                    financial strategies—it’s about creating a secure future for you and your
+                                    family. By blending the precision of Artificial Intelligence with the wisdom of
+                                    experienced financial advisors, we bring you a unique balance of innovation,
+                                    trust, and personalized service.</span>
                             </p>
 
-                            <button class="explore-more">
+                            <button id="banner-explore-more" class="explore-more">
                                 <?php echo esc_html($banner_button_text); ?>
                                 <img src="<?php echo esc_url(get_site_url()); ?>/wp-content/themes/synergy-theme/assets/img/arrow-more-circle.svg" alt="Arrow Icon" />
                             </button>
 
-                            <div class="extra-description" style="display: none;">
 
-                                <p>We understand that building and preserving wealth isn’t just about financial strategies—it’s about creating a secure future for you and your family.
-                                    By blending the precision of Artificial Intelligence with the wisdom of experienced financial advisors, we bring you a unique balance of innovation, trust, and personalized service.</p>
-
-                            </div>
 
 
                         </div>
@@ -272,8 +276,8 @@ get_header();
                             </div>
                             <div class="sb-serv-content">
                                 <h4><?php echo get_the_title(); ?></h4>
-                                <p class="service-text"><?php echo get_field('service_description'); ?> </p>
-                                <a href="#" class="read-more"> Learn More <img src="<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/img/aroow-blue.svg" /></a>
+                                <p class="product-dec"><?php echo get_field('service_description'); ?> </p>
+                                <a href="#" class="learn-more" data-site-url="<?php echo esc_url(get_site_url()); ?>"> Learn More <img src="<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/img/aroow-blue.svg" /></a>
                             </div>
 
 
@@ -321,8 +325,8 @@ get_header();
                             <div class="sb-serv-content">
                                 <h4><?php echo get_the_title(); ?></h4>
 
-                                <p class="service-text"><?php echo get_field('service_description'); ?></p>
-                                <a class="read-more">Learn More <img src="<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/img/aroow-blue.svg" /></a>
+                                <p class="product-dec"><?php echo get_field('service_description'); ?></p>
+                                <a href="#" class="learn-more">Learn More <img src="<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/img/aroow-blue.svg" /></a>
 
 
 
@@ -410,6 +414,7 @@ if ($ai) {
 
                             <div class="h10-process-wrapper">
                                 <?php
+                                $i=1;
                                 $strategy_args = array(
                                     'post_type'      => 'ai-strategy', // your custom post type
                                     'posts_per_page' => -1,        // -1 = all posts
@@ -426,7 +431,7 @@ if ($ai) {
                                 ?>
 
                                         <div class="h10-process-item tj-sticky-panel-3 tj-el-process">
-
+                                               <div class="number-label"><?php echo '0' . $i; ?></div>
                                             <div class="h10-process-icon tj-el-icon">
                                                 <img src="<?php echo get_field('icon'); ?>" />
                                             </div>
@@ -437,7 +442,7 @@ if ($ai) {
                                         </div>
 
                                 <?php
-
+                                     $i++;
                                     endwhile;
                                     wp_reset_postdata(); // reset query
                                 else :
@@ -466,6 +471,7 @@ if ($ai) {
     <div class="swiper mySwiper">
         <div class="swiper-wrapper">
             <?php
+            $i=1;
             $ai_strategy_query = new WP_Query($strategy_args);
 
             if ($ai_strategy_query->have_posts()) :
@@ -475,7 +481,7 @@ if ($ai) {
                     <!-- Each Slide -->
                     <div class="swiper-slide">
                         <div class="process-box">
-
+                          <div class="number-label"><?php echo '0' . $i; ?></div>
                             <div class="h10-process-icon tj-el-icon">
                                 <img src="<?php echo get_field('icon'); ?>" />
                             </div>
@@ -486,7 +492,7 @@ if ($ai) {
                         </div>
                     </div>
             <?php
-
+                 $i++;
                 endwhile;
                 wp_reset_postdata(); // reset query
             else :
@@ -517,7 +523,7 @@ if ($ai) {
                         <br>or fill the following form. We will contact you back within 12
                         hours or prior.
                     </p>
-                    <form action="<?php echo esc_url(admin_url('admin-post.php')); ?>" method="post">
+                    <form action="<?php echo esc_url(admin_url('admin-post.php')); ?>" method="post" id="synergy-contact-form">
                         <input type="hidden" name="action" value="synergy_contact_form">
 
                         <div class="row">
@@ -578,12 +584,14 @@ if ($ai) {
                                 </button>
                             </div>
                         </div>
+
                     </form>
-                    <?php if (isset($_GET['contact_success']) && $_GET['contact_success'] == '1') : ?>
-                        <div class="contact-success-message" style="padding:15px; background: #d4edda; color:#155724; border:1px solid #c3e6cb; margin-bottom:15px;">
+                    <?php if (isset($_GET['contact_status']) && $_GET['contact_status'] === 'success') : ?>
+                        <div class="contact-success-message" style="color: green; margin-bottom: 20px;">
                             Thank you! Your message has been sent successfully.
                         </div>
                     <?php endif; ?>
+
 
 
                 </div>
@@ -591,6 +599,7 @@ if ($ai) {
         </div>
     </div>
 </section>
+
 
 
 <?php get_footer(); ?>
