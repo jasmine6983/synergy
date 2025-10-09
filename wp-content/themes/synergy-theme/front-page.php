@@ -326,7 +326,7 @@ get_header();
                                 <h4><?php echo get_the_title(); ?></h4>
 
                                 <p class="product-dec"><?php echo get_field('service_description'); ?></p>
-                                <a href="#" class="learn-more">Learn More <img src="<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/img/aroow-blue.svg" /></a>
+                                <a href="#" class="learn-more" data-site-url="<?php echo esc_url(get_site_url()); ?>">Learn More <img src="<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/img/aroow-blue.svg" /></a>
 
 
 
