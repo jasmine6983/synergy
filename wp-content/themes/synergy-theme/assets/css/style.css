@@ -471,7 +471,7 @@ label.bg-label.white {
     font-family: 'Poppins';
 }
 
-.pin-spacer::before {
+/* .pin-spacer::before {
     content: '';
     position: absolute;
     width: 30px;
@@ -490,11 +490,38 @@ label.bg-label.white {
     top: 160px;
     background: #fff;
     left: -64px;
+} */
+
+
+
+
+
+/* .h10-process-wrapper .pin-spacer:last-child::after {
+    content: none;
+} */
+
+.h10-process-item::before {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    left: -80px;
+    top: 150px;
+    border-radius: 23px;
 }
-
-
-
-.h10-process-wrapper .pin-spacer:last-child::after {
+ 
+.h10-process-item::after {
+    width: 1px;
+    content: '';
+    position: absolute;
+    height: 105%;
+    top: 160px;
+    background: #fff;
+    left: -64px;
+}
+ 
+.h10-process-wrapper .pin-spacer:last-child .h10-process-item::after {
     content: none;
 }
 

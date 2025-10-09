@@ -213,7 +213,7 @@ get_header();
         <div class="mobile-visible-about">
             <div class="mob-view-about-atc-head">
                 <!-- <h4>What is Lorem Ipsum</h4> -->
-                <p>Our philosophy is simple—wealth is not just about accumulating money; it’s about achieving life goals, protecting what matters most, and creating a lasting legacy. We combine :</p>
+                <p>Our philosophy is simple—wealth is not just about accumulating money,it’s about achieving life goals, protecting what matters most, and creating a lasting legacy. We combine :</p>
             </div>
             <div class="d-flex about-us-op">
                 <div><img src="<?php echo $feature_1_icon; ?>"></div>
