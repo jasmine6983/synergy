@@ -97,7 +97,7 @@ Template Name: Footer
         </div>
     </div>
 </footer>
-<script src="<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/js/jquery.js"></script>
+<!-- <script src="<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/js/jquery.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
     crossorigin="anonymous"></script>
@@ -109,31 +109,10 @@ Template Name: Footer
 <script src="<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/js/split-text.min.js"></script>
 <script src="<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/js/wow.min.js"></script>
 <script src="<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/js/theme-main.js"></script>
-<script src="<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/js/main.js"></script>
+<script src="<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/js/main.js"></script> -->
+
+
+<?php wp_footer(); ?>
 </body>
-<script>
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                const headerOffset = 80; // Adjust if you have a sticky header
-                const elementPosition = target.getBoundingClientRect().top;
-                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-                window.scrollTo({
-                    top: offsetPosition,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-
-
-
-   
-    
-
-</script>
 
 </html>

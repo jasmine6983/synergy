@@ -58,6 +58,112 @@ function synergy_enqueue_styles() {
 add_action('wp_enqueue_scripts', 'synergy_enqueue_styles');
 
 
+function synergy_enqueue_scripts() {
+
+    // jQuery (local) 
+    wp_enqueue_script( 
+        'jquery-local', get_site_url() . '/wp-content/themes/synergy-theme/assets/js/jquery.js', 
+        array(), null, 
+        true );
+
+    // Bootstrap bundle
+    wp_enqueue_script(
+        'bootstrap-bundle',
+        'https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js',
+        array('jquery'),
+        '5.3.8',
+        true
+    );
+
+    // Swiper
+    wp_enqueue_script(
+        'swiper',
+        'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js',
+        array(),
+        '11',
+        true
+    );
+
+    // Odometer
+    wp_enqueue_script(
+        'odometer',
+        get_template_directory_uri() . '/assets/js/odometer.js',
+        array(),
+        null,
+        true
+    );
+
+    // GSAP
+    wp_enqueue_script(
+        'gsap',
+        'https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js',
+        array(),
+        '3.12.5',
+        true
+    );
+
+    // ScrollTrigger
+    wp_enqueue_script(
+        'scroll-trigger',
+        get_template_directory_uri() . '/assets/js/scroll-trigger.min.js',
+        array('gsap'),
+        null,
+        true
+    );
+
+    // SplitText
+    wp_enqueue_script(
+        'split-text',
+        get_template_directory_uri() . '/assets/js/split-text.min.js',
+        array('gsap'),
+        null,
+        true
+    );
+
+    // WOW.js
+    wp_enqueue_script(
+        'wow',
+        get_template_directory_uri() . '/assets/js/wow.min.js',
+        array('jquery'),
+        null,
+        true
+    );
+
+    // Theme main JS
+    wp_enqueue_script(
+        'theme-main',
+        get_template_directory_uri() . '/assets/js/theme-main.js',
+        array('jquery'),
+        null,
+        true
+    );
+
+    // Main JS
+    wp_enqueue_script(
+        'main-js',
+        get_template_directory_uri() . '/assets/js/main.js',
+        array('jquery'),
+        null,
+        true
+    );
+
+    // AJAX contact form JS
+    wp_enqueue_script(
+        'ccf-ajax-script',
+        get_template_directory_uri() . '/assets/js/ccf-ajax.js',
+        array('jquery'),
+        null,
+        true
+    );
+
+    // Localize AJAX URL & nonce
+    wp_localize_script('ccf-ajax-script', 'ccf_ajax_obj', array(
+        'ajax_url' => admin_url('admin-ajax.php'),
+        'nonce'    => wp_create_nonce('ccf_nonce')
+    ));
+}
+
+add_action('wp_enqueue_scripts', 'synergy_enqueue_scripts');
 
 ?>
 
