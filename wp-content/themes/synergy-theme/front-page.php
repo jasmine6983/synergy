@@ -261,8 +261,8 @@ get_header();
                     <label class="bg-label">Our Products</label>
                     <h1>Wide Range of <br>Investment <span>Products</span></h1>
                 </div>
-                <button class="explore-more flex-none"><?php echo $button_text; ?><img
-                        src="<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/img/arrow-more-circle.svg" /></button>
+                <!-- <button class="explore-more flex-none"><?php echo $button_text; ?><img
+                        src="<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/img/arrow-more-circle.svg" /></button> -->
             </div>
         </div>
         <div class="row">
