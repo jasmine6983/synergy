@@ -575,12 +575,12 @@ if ($ai) {
                                 <div class="form-group">
                                     <select name="service" class="form-control" required>
                                         <option value="">Choose Services*</option>
-                                        <option value="Service 1">Mutual Funds</option>
-                                        <option value="Service 2">Portfolio Management Services</option>
-                                        <option value="Service 3">Alternative Investment Funds</option>
-                                        <option value="Service 4">Financial Planning</option>
-                                        <option value="Service 5">Retirement Solutions</option>
-                                        <option value="Service 6">Insurance Advisory</option>
+                                        <option value="Mutual Funds">Mutual Funds</option>
+                                        <option value="Portfolio Management Services">Portfolio Management Services</option>
+                                        <option value="Alternative Investment Funds">Alternative Investment Funds</option>
+                                        <option value="Financial Planning">Financial Planning</option>
+                                        <option value="Retirement Solutions">Retirement Solutions</option>
+                                        <option value="Insurance Advisory">Insurance Advisory</option>
                                     </select>
                                 </div>
                             </div>
