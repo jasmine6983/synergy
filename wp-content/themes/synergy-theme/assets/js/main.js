@@ -310,14 +310,3 @@ $(".learn-more").click(function (e) {
 });
 
 
-// $("#banner-explore-more-mobile").click(function () {
-//   $(".mobile-banner-dec").toggleClass("mobile-banner-dec-shaow");
- 
-//   // toggle button text
-//   var btnText = $(this).find(".btn-text");
-//   if (btnText.text().trim() === "Explore More") {
-//     btnText.text("Show Less");
-//   } else {
-//     btnText.text("Explore More");
-//   }
-// });

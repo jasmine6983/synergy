@@ -23,6 +23,7 @@ get_header();
                             $caption_4 = $banner['caption_4'];
                             $banner_description_part_1 = $banner['banner_description_part_1'];
                             $banner_description_part_2 = $banner['banner_description_part_2'];
+                            $banner_hidden_content = $banner['banner_hidden_content'];
                             $banner_button_text = $banner['banner_button_text'];
                             $banner_count_1 = $banner['banner_count_1'];
                             $banner_count_1_text = $banner['banner_count_1_text'];
@@ -43,22 +44,14 @@ get_header();
                                 <?php echo esc_html($banner_description_part_1); ?>
                                 <br>
                                 <?php echo esc_html($banner_description_part_2); ?><br>
-                                <span class="hide-show">We understand that building and preserving wealth
-                                    isn’t just about
-                                    financial strategies—it’s about creating a secure future for you and your
-                                    family. By blending the precision of Artificial Intelligence with the wisdom of
-                                    experienced financial advisors, we bring you a unique balance of innovation,
-                                    trust, and personalized service.</span>
+                                <span class="hide-show"><?php echo esc_html($banner_hidden_content); ?></span>
                             </p>
 
                             <button id="banner-explore-more" class="explore-more">
                                 <span class="btn-text"><?php echo esc_html($banner_button_text); ?></span>
                                 <img src="<?php echo esc_url(get_site_url()); ?>/wp-content/themes/synergy-theme/assets/img/arrow-more-circle.svg" alt="Arrow Icon" />
                             </button>
-                            <!-- <button id="banner-explore-more-mobile" class="explore-more">
-                                <span class="btn-text"><?php echo esc_html($banner_button_text); ?></span>
-                                <img src="<?php echo esc_url(get_site_url()); ?>/wp-content/themes/synergy-theme/assets/img/arrow-more-circle.svg" />
-                            </button> -->
+                           
 
 
 
@@ -115,16 +108,7 @@ get_header();
                 </div>
             </div>
         </div>
-        <p class="mobile-banner-dec">
-            We understand that building and preserving
-            wealth
-            isn’t just about
-            financial strategies—it’s about creating a secure future for you and your
-            family. By blending the precision of Artificial Intelligence with the wisdom of
-            experienced financial advisors, we bring you a unique balance of innovation,
-            trust, and personalized service.
-        </p>
-    </div>
+        
 </section>
 
 
@@ -166,6 +150,7 @@ get_header();
                 $about_right_caption_1 = $about['about_right_caption_1'];
                 $about_right_caption_2 = $about['about_right_caption_2'];
                 $about_right_image = $about['about_right_image'];
+                $mobile_visible_about = $about['mobile_visible_about'];
                 ?>
 
                 <h1><?php echo $caption_1; ?> <span><?php echo $caption_2; ?></span> <?php echo $caption_3; ?> </h1>
@@ -212,8 +197,8 @@ get_header();
         <!-- mobile visible  -->
         <div class="mobile-visible-about">
             <div class="mob-view-about-atc-head">
-                <!-- <h4>What is Lorem Ipsum</h4> -->
-                <p>Our philosophy is simple—wealth is not just about accumulating money,it’s about achieving life goals, protecting what matters most, and creating a lasting legacy. We combine :</p>
+               
+                <p><?php echo $mobile_visible_about;?></p>
             </div>
             <div class="d-flex about-us-op">
                 <div><img src="<?php echo $feature_1_icon; ?>"></div>
@@ -250,8 +235,8 @@ get_header();
 
             if ($services) {
                 $service_caption_1   = $services['service_caption_1'] ?? 'no data';
-                $service_caption_2   = $services['service_caption_1'] ?? 'no data';
-                $service_caption_3   = $services['service_caption_1'] ?? 'no data';
+                $service_caption_2   = $services['service_caption_2'] ?? 'no data';
+                $service_caption_3   = $services['service_caption_3'] ?? 'no data';
                 $button_text = $services['button_text'] ?? 'no data';
             }
             ?>
@@ -259,10 +244,9 @@ get_header();
             <div class="d-flex head-flex">
                 <div>
                     <label class="bg-label">Our Products</label>
-                    <h1>Wide Range of <br>Investment <span>Products</span></h1>
+                    <h1><?php echo $service_caption_1;?> <br><?php echo $service_caption_2;?> <span><?php echo $service_caption_3;?></span></h1>
                 </div>
-                <!-- <button class="explore-more flex-none"><?php echo $button_text; ?><img
-                        src="<?php echo get_site_url(); ?>/wp-content/themes/synergy-theme/assets/img/arrow-more-circle.svg" /></button> -->
+      
             </div>
         </div>
         <div class="row">
@@ -316,7 +300,7 @@ get_header();
 
 <div id="products-mobile" class="our-services-mobile">
     <label class="bg-label">Our Products</label>
-    <h1>Wide Range of Investment <span>Products</span></h1>
+    <h1><?php echo $service_caption_1;?><br><?php echo $service_caption_2;?> <span><?php echo $service_caption_3;?></span></h1>
     <!-- Swiper Container -->
     <div class="swiper mySwiper">
         <div class="swiper-wrapper">
@@ -532,8 +516,8 @@ if ($ai) {
             <div class="col-md-6 offset-md-6">
                 <div class="form-wrap">
                     <h2>Connect With Us</h2>
-                    <p>Hey! Connect us with  <span>0987-6543-210</span>or email us through
-                        <span>contact@synergyaiwealth.com</span>
+                    <p>Hey! Connect us with  <span><?php echo get_field('contact_phone_number');?></span>or email us through
+                        <span><?php echo get_field('contact_form_email');?></span>
                         <br>or fill the following form. We will contact you back within 12
                         hours or prior.
                     </p>

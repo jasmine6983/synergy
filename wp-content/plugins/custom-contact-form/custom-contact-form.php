@@ -65,7 +65,7 @@ function synergy_handle_contact_form()
     ]);
 
     // Send Email
-    $to = 'contact@synergyaiwealth.com';
+    $to = get_field('contact_form_email', 6);
     $subject = "New Contact Form Submission";
     $body = "You received a new message:\n\n" .
         "Name: $first_name $last_name\n" .
