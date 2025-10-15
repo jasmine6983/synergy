@@ -34,17 +34,14 @@ function ccf_create_table()
 }
 register_activation_hook(__FILE__, 'ccf_create_table');
 
-// ✅ 2. Handle Form Submission
-function synergy_handle_contact_form()
-{
-    if (! isset($_POST['first_name'])) {
-        wp_die('Invalid request.');
-    }
+add_action('wp_ajax_synergy_contact_form_ajax', 'synergy_handle_contact_form_ajax');
+add_action('wp_ajax_nopriv_synergy_contact_form_ajax', 'synergy_handle_contact_form_ajax');
 
+function synergy_handle_contact_form_ajax() {
     global $wpdb;
+
     $table_name = $wpdb->prefix . "custom_contact_form";
 
-    // Sanitize inputs
     $first_name = sanitize_text_field($_POST['first_name']);
     $last_name  = sanitize_text_field($_POST['last_name']);
     $email      = sanitize_email($_POST['email']);
@@ -53,8 +50,7 @@ function synergy_handle_contact_form()
     $service    = sanitize_text_field($_POST['service']);
     $message    = sanitize_textarea_field($_POST['message']);
 
-    // Insert into DB
-    $wpdb->insert($table_name, [
+    $inserted = $wpdb->insert($table_name, [
         'first_name' => $first_name,
         'last_name'  => $last_name,
         'email'      => $email,
@@ -64,7 +60,11 @@ function synergy_handle_contact_form()
         'message'    => $message,
     ]);
 
-    // Send Email
+    if (! $inserted) {
+        wp_send_json_error('Database insert failed');
+    }
+
+    // Send email asynchronously
     $to = get_field('contact_form_email', 6);
     $subject = "New Contact Form Submission";
     $body = "You received a new message:\n\n" .
@@ -76,16 +76,11 @@ function synergy_handle_contact_form()
         "Message:\n$message";
     $headers = ["Content-Type: text/plain; charset=UTF-8"];
 
+    // Optionally, use wp_remote_post() to trigger a background mail process
     wp_mail($to, $subject, $body, $headers);
 
-    
-  // Redirect after submission with success parameter
-wp_redirect(add_query_arg('contact_status', 'success', home_url('/')));
-exit;
-    exit;
+    wp_send_json_success('Message sent successfully');
 }
-add_action('admin_post_nopriv_synergy_contact_form', 'synergy_handle_contact_form'); // for non-logged-in users
-add_action('admin_post_synergy_contact_form', 'synergy_handle_contact_form'); // for logged-in users
 
 
 // ✅ 3. Admin Page to Display Entries

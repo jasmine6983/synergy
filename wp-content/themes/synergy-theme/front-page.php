@@ -51,7 +51,7 @@ get_header();
                                 <span class="btn-text"><?php echo esc_html($banner_button_text); ?></span>
                                 <img src="<?php echo esc_url(get_site_url()); ?>/wp-content/themes/synergy-theme/assets/img/arrow-more-circle.svg" alt="Arrow Icon" />
                             </button>
-                           
+
 
 
 
@@ -108,7 +108,7 @@ get_header();
                 </div>
             </div>
         </div>
-        
+
 </section>
 
 
@@ -197,8 +197,8 @@ get_header();
         <!-- mobile visible  -->
         <div class="mobile-visible-about">
             <div class="mob-view-about-atc-head">
-               
-                <p><?php echo $mobile_visible_about;?></p>
+
+                <p><?php echo $mobile_visible_about; ?></p>
             </div>
             <div class="d-flex about-us-op">
                 <div><img src="<?php echo $feature_1_icon; ?>"></div>
@@ -244,9 +244,9 @@ get_header();
             <div class="d-flex head-flex">
                 <div>
                     <label class="bg-label">Our Products</label>
-                    <h1><?php echo $service_caption_1;?> <br><?php echo $service_caption_2;?> <span><?php echo $service_caption_3;?></span></h1>
+                    <h1><?php echo $service_caption_1; ?> <br><?php echo $service_caption_2; ?> <span><?php echo $service_caption_3; ?></span></h1>
                 </div>
-      
+
             </div>
         </div>
         <div class="row">
@@ -300,7 +300,7 @@ get_header();
 
 <div id="products-mobile" class="our-services-mobile">
     <label class="bg-label">Our Products</label>
-    <h1><?php echo $service_caption_1;?><br><?php echo $service_caption_2;?> <span><?php echo $service_caption_3;?></span></h1>
+    <h1><?php echo $service_caption_1; ?><br><?php echo $service_caption_2; ?> <span><?php echo $service_caption_3; ?></span></h1>
     <!-- Swiper Container -->
     <div class="swiper mySwiper">
         <div class="swiper-wrapper">
@@ -516,13 +516,13 @@ if ($ai) {
             <div class="col-md-6 offset-md-6">
                 <div class="form-wrap">
                     <h2>Connect With Us</h2>
-                    <p>Hey! Connect us with  <span><?php echo get_field('contact_phone_number');?></span>or email us through
-                        <span><?php echo get_field('contact_form_email');?></span>
+                    <p>Hey! Connect us with  <span><?php echo get_field('contact_phone_number'); ?></span>or email us through
+                        <span><?php echo get_field('contact_form_email'); ?></span>
                         <br>or fill the following form. We will contact you back within 12
                         hours or prior.
                     </p>
-                    <form action="<?php echo esc_url(admin_url('admin-post.php')); ?>" method="post" id="synergy-contact-form">
-                        <input type="hidden" name="action" value="synergy_contact_form">
+                    <form id="contactForm">
+                        
 
                         <div class="row">
                             <div class="col-md-6 col-xs-12">
@@ -582,13 +582,10 @@ if ($ai) {
                                 </button>
                             </div>
                         </div>
+                        <div id="formStatus"></div>
 
                     </form>
-                    <?php if (isset($_GET['contact_status']) && $_GET['contact_status'] === 'success') : ?>
-                        <div class="contact-success-message" style="color: green; margin-bottom: 20px;">
-                            Thank you! Your message has been sent successfully.
-                        </div>
-                    <?php endif; ?>
+
 
 
 
